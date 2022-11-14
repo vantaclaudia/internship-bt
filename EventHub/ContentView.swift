@@ -15,7 +15,7 @@ struct ContentView: View {
             Text("ContentView")
                 .foregroundColor(.white)
                 .font(.system(size: 30))
-        }
+        } 
     }
 }
 

@@ -30,13 +30,13 @@ struct SplashScreenView: View {
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                                 self.isActive = true
-                            }
                         }
                     }
                 }
             }
         }
     }
+}
 
 struct SplashScreenView_Previews: PreviewProvider {
     static var previews: some View {
