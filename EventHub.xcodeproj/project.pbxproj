@@ -12,6 +12,7 @@
 		B905C37E29226CAD001F22DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905C37D29226CAD001F22DD /* Assets.xcassets */; };
 		B905C38129226CAD001F22DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905C38029226CAD001F22DD /* Preview Assets.xcassets */; };
 		B905C38829227453001F22DD /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C38729227453001F22DD /* SplashScreenView.swift */; };
+		B905C392292671CF001F22DD /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C391292671CF001F22DD /* customButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B905C37D29226CAD001F22DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B905C38029226CAD001F22DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B905C38729227453001F22DD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		B905C391292671CF001F22DD /* customButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		B905C37829226CAB001F22DD /* EventHub */ = {
 			isa = PBXGroup;
 			children = (
+				B905C38F29266DBE001F22DD /* assets */,
 				B905C37929226CAB001F22DD /* EventHubApp.swift */,
 				B905C37B29226CAB001F22DD /* ContentView.swift */,
 				B905C38729227453001F22DD /* SplashScreenView.swift */,
@@ -68,6 +71,22 @@
 				B905C38029226CAD001F22DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B905C38F29266DBE001F22DD /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				B905C39029266DD4001F22DD /* components */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		B905C39029266DD4001F22DD /* components */ = {
+			isa = PBXGroup;
+			children = (
+				B905C391292671CF001F22DD /* customButton.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B905C392292671CF001F22DD /* customButton.swift in Sources */,
 				B905C37C29226CAB001F22DD /* ContentView.swift in Sources */,
 				B905C37A29226CAB001F22DD /* EventHubApp.swift in Sources */,
 				B905C38829227453001F22DD /* SplashScreenView.swift in Sources */,

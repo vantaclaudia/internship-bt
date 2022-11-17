@@ -9,13 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color.blue
-                .ignoresSafeArea()
-            Text("ContentView")
-                .foregroundColor(.white)
-                .font(.system(size: 30))
-        } 
+        VStack() {
+            Image("splashScreen-logo")
+                .frame(width: 294.0, height: 88.0)
+                    .scaledToFit()
+            customButton(buttonText: "Intră în cont")
+        }
     }
 }
 
