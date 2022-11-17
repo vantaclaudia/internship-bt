@@ -13,7 +13,9 @@ struct ContentView: View {
             Image("splashScreen-logo")
                 .frame(width: 294.0, height: 88.0)
                     .scaledToFit()
-            customButton(buttonText: "Intră în cont")
+            customInputButton(inputText: "Adresa de e-mail", inputIconText: "envelope")
+            customInputButton(inputText: "Parola", inputIconText: "key")
+            customPurpleButton(buttonText: "Intră în cont")
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct customButton: View {
+struct customPurpleButton: View {
     public private(set) var buttonText: String
     
     var body: some View {
@@ -23,6 +23,6 @@ struct customButton: View {
 
 struct customButton_Previews: PreviewProvider {
     static var previews: some View {
-        customButton(buttonText: "")
+        customPurpleButton(buttonText: "")
     }
 }

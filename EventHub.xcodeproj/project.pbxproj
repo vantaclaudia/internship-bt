@@ -12,7 +12,8 @@
 		B905C37E29226CAD001F22DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905C37D29226CAD001F22DD /* Assets.xcassets */; };
 		B905C38129226CAD001F22DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905C38029226CAD001F22DD /* Preview Assets.xcassets */; };
 		B905C38829227453001F22DD /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C38729227453001F22DD /* SplashScreenView.swift */; };
-		B905C392292671CF001F22DD /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C391292671CF001F22DD /* customButton.swift */; };
+		B905C392292671CF001F22DD /* customPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C391292671CF001F22DD /* customPurpleButton.swift */; };
+		B905C3942926A506001F22DD /* customInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C3932926A506001F22DD /* customInputButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +23,8 @@
 		B905C37D29226CAD001F22DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B905C38029226CAD001F22DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B905C38729227453001F22DD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		B905C391292671CF001F22DD /* customButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
+		B905C391292671CF001F22DD /* customPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPurpleButton.swift; sourceTree = "<group>"; };
+		B905C3932926A506001F22DD /* customInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customInputButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,8 @@
 		B905C39029266DD4001F22DD /* components */ = {
 			isa = PBXGroup;
 			children = (
-				B905C391292671CF001F22DD /* customButton.swift */,
+				B905C391292671CF001F22DD /* customPurpleButton.swift */,
+				B905C3932926A506001F22DD /* customInputButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -159,7 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B905C392292671CF001F22DD /* customButton.swift in Sources */,
+				B905C3942926A506001F22DD /* customInputButton.swift in Sources */,
+				B905C392292671CF001F22DD /* customPurpleButton.swift in Sources */,
 				B905C37C29226CAB001F22DD /* ContentView.swift in Sources */,
 				B905C37A29226CAB001F22DD /* EventHubApp.swift in Sources */,
 				B905C38829227453001F22DD /* SplashScreenView.swift in Sources */,
