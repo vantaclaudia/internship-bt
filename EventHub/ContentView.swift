@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        NavigationView {
         VStack {
             VStack {
                 Image("splashScreen-logo")
@@ -32,11 +33,12 @@ struct ContentView: View {
                     .padding(.top, 5)
             }
             Spacer()
-            HStack {
-                Text("Nu ai cont?")
-                Button(action: {}){
-                    Text( "Înregistrează-te")
-                        .foregroundColor(Color("purple")).bold()
+                HStack {
+                    Text("Nu ai cont?")
+                    NavigationLink(destination: RegistrationView(), label: {
+                        Text("Înregistrează-te")
+                            .foregroundColor(Color("purple")).bold()
+                    })
                 }
             }
         }
