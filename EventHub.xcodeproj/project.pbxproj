@@ -15,6 +15,7 @@
 		B905C392292671CF001F22DD /* customPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C391292671CF001F22DD /* customPurpleButton.swift */; };
 		B905C3942926A506001F22DD /* customInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C3932926A506001F22DD /* customInputButton.swift */; };
 		B905C3962927881B001F22DD /* customPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C3952927881B001F22DD /* customPasswordButton.swift */; };
+		B905C39829278D8D001F22DD /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C39729278D8D001F22DD /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B905C391292671CF001F22DD /* customPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPurpleButton.swift; sourceTree = "<group>"; };
 		B905C3932926A506001F22DD /* customInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customInputButton.swift; sourceTree = "<group>"; };
 		B905C3952927881B001F22DD /* customPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPasswordButton.swift; sourceTree = "<group>"; };
+		B905C39729278D8D001F22DD /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				B905C38729227453001F22DD /* SplashScreenView.swift */,
 				B905C37D29226CAD001F22DD /* Assets.xcassets */,
 				B905C37F29226CAD001F22DD /* Preview Content */,
+				B905C39729278D8D001F22DD /* RegistrationView.swift */,
 			);
 			path = EventHub;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				B905C3942926A506001F22DD /* customInputButton.swift in Sources */,
 				B905C392292671CF001F22DD /* customPurpleButton.swift in Sources */,
 				B905C37C29226CAB001F22DD /* ContentView.swift in Sources */,
+				B905C39829278D8D001F22DD /* RegistrationView.swift in Sources */,
 				B905C37A29226CAB001F22DD /* EventHubApp.swift in Sources */,
 				B905C38829227453001F22DD /* SplashScreenView.swift in Sources */,
 				B905C3962927881B001F22DD /* customPasswordButton.swift in Sources */,
