@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct customPasswordButton: View {
-    @State private(set) var mail = ""
+    @State private(set) var password = ""
     public private(set) var inputText: String
     public private(set) var inputIconText: String
     
     var body: some View {
         HStack {
-            SecureField(inputText, text: $mail)
+            SecureField(inputText, text: $password)
             Image(inputIconText).foregroundColor(Color("borderGrey"))
         }
             .padding()
