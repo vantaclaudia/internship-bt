@@ -32,12 +32,10 @@ struct RegistrationView: View {
             Spacer()
             HStack {
                 Text("Ai deja cont?")
-                Button(action: {
-                    
-                }){
-                    Text( "Autentifică-te")
+                NavigationLink(destination: ContentView(), label: {
+                    Text("Autentifică-te")
                         .foregroundColor(Color("purple")).bold()
-                }
+                })
             }
         }
     }
