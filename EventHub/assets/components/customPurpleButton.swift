@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct customPurpleButton: View {
-    public private(set) var buttonText: String
+    public private(set) var buttonText: String 
     
     var body: some View {
         ZStack {
