@@ -14,6 +14,7 @@
 		B905C38829227453001F22DD /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C38729227453001F22DD /* SplashScreenView.swift */; };
 		B905C392292671CF001F22DD /* customPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C391292671CF001F22DD /* customPurpleButton.swift */; };
 		B905C3942926A506001F22DD /* customInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C3932926A506001F22DD /* customInputButton.swift */; };
+		B905C3962927881B001F22DD /* customPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C3952927881B001F22DD /* customPasswordButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B905C38729227453001F22DD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		B905C391292671CF001F22DD /* customPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPurpleButton.swift; sourceTree = "<group>"; };
 		B905C3932926A506001F22DD /* customInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customInputButton.swift; sourceTree = "<group>"; };
+		B905C3952927881B001F22DD /* customPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPasswordButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				B905C391292671CF001F22DD /* customPurpleButton.swift */,
 				B905C3932926A506001F22DD /* customInputButton.swift */,
+				B905C3952927881B001F22DD /* customPasswordButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				B905C37C29226CAB001F22DD /* ContentView.swift in Sources */,
 				B905C37A29226CAB001F22DD /* EventHubApp.swift in Sources */,
 				B905C38829227453001F22DD /* SplashScreenView.swift in Sources */,
+				B905C3962927881B001F22DD /* customPasswordButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,20 +1,20 @@
 //
-//  customInputButton.swift
+//  customPasswordButton.swift
 //  EventHub
 //
-//  Created by internship on 17.11.2022.
+//  Created by internship on 18.11.2022.
 //
 
 import SwiftUI
 
-struct customInputButton: View {
+struct customPasswordButton: View {
     @State private(set) var mail = ""
     public private(set) var inputText: String
-    public private(set) var inputIconText: String 
+    public private(set) var inputIconText: String
     
     var body: some View {
         HStack {
-            TextField(inputText, text: $mail)
+            SecureField(inputText, text: $mail)
             Image(inputIconText).foregroundColor(Color("borderGrey"))
         }
             .padding()
@@ -26,7 +26,7 @@ struct customInputButton: View {
     }
 }
 
-struct customInputButton_Previews: PreviewProvider {
+struct customPasswordButton_Previews: PreviewProvider {
     static var previews: some View {
         customInputButton(inputText: "", inputIconText:"")
     }
