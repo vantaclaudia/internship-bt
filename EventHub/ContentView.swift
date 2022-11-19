@@ -25,20 +25,17 @@ struct ContentView: View {
                     .frame(width: 360, height: 29, alignment: .topLeading)
             }
             VStack {
-                customInputButton(inputText: "Adresa de e-mail", inputIconText: "envelope")
-                    .padding(.top, 5)
-                customPasswordButton(inputText: "Parola", inputIconText: "key")
-                    .padding(.top, 5)
+//                customInputButton(inputText: "Adresa de e-mail", inputIconText: "envelope")
+//                    .padding(.top, 5)
+//                customPasswordButton(inputText: "Parola", inputIconText: "key")
+//                    .padding(.top, 5)
                 customPurpleButton(buttonText: "INTRĂ ÎN CONT")
                     .padding(.top, 5)
             }
             Spacer()
                 HStack {
                     Text("Nu ai cont?")
-                    NavigationLink(destination: RegistrationView(), label: {
-                        Text("Înregistrează-te")
-                            .foregroundColor(Color("purple")).bold()
-                    })
+                    Text("Înregistrează-te")
                 }
             }
         }

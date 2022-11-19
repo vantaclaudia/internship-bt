@@ -18,24 +18,21 @@ struct RegistrationView: View {
                     .padding(.top, 30)
             }
             VStack {
-                customInputButton(inputText: "Numele și Prenumele", inputIconText: "user")
-                    .padding(.top, 5)
-                customInputButton(inputText: "Adresa de e-mail", inputIconText: "envelope")
-                    .padding(.top, 5)
-                customPasswordButton(inputText: "Parola", inputIconText: "key")
-                    .padding(.top, 5)
-                customPasswordButton(inputText: "Confirmă parola", inputIconText: "key")
-                    .padding(.top, 5)
+//                customInputButton(inputText: "Numele și Prenumele", inputIconText: "user")
+//                    .padding(.top, 5)
+//                customInputButton(inputText: "Adresa de e-mail", inputIconText: "envelope")
+//                    .padding(.top, 5)
+//                customPasswordButton(inputText: "Parola", inputIconText: "key")
+//                    .padding(.top, 5)
+//                customPasswordButton(inputText: "Confirmă parola", inputIconText: "key")
+//                    .padding(.top, 5)
                 customPurpleButton(buttonText: "CREEAZĂ CONT")
                     .padding(.top, 20)
             }
             Spacer()
             HStack {
                 Text("Ai deja cont?")
-                NavigationLink(destination: ContentView(), label: {
-                    Text("Autentifică-te")
-                        .foregroundColor(Color("purple")).bold()
-                })
+                Text("Autentifică-te")
             }
         }
     }

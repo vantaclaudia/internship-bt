@@ -14,8 +14,8 @@ struct customInputButton: View {
     
     var body: some View {
         HStack {
-            TextField(inputText, text: $mail)
-            Image(inputIconText).foregroundColor(Color("borderGrey"))
+            TextField("Adresa de e-mail", text: $mail)
+            Image("envelope").foregroundColor(Color("borderGrey"))
         }
             .padding()
             .background(Color.white)
