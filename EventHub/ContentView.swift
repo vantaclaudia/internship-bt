@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var password = ""
+    @State private var mail = ""
+    
     var body: some View {
         NavigationView {
         VStack {
@@ -25,12 +28,12 @@ struct ContentView: View {
                     .frame(width: 360, height: 29, alignment: .topLeading)
             }
             VStack {
-//                customInputButton(inputText: "Adresa de e-mail", inputIconText: "envelope")
-//                    .padding(.top, 5)
-//                customPasswordButton(inputText: "Parola", inputIconText: "key")
-//                    .padding(.top, 5)
-                customPurpleButton(buttonText: "INTRĂ ÎN CONT")
+                CustomMailButton(mail: "Adresa de e-mail", mailText: $mail, icon: "envelope")
                     .padding(.top, 5)
+                CustomPasswordButton(password: "Parola", passwordText: $password, icon: "key")
+                    .padding(.top, 5)
+                CustomPurpleButton(buttonText: "INTRĂ ÎN CONT")
+                    .padding(.top, 10)
             }
             Spacer()
                 HStack {
@@ -47,3 +50,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

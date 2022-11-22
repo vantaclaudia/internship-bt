@@ -22,7 +22,7 @@ struct SplashScreenView: View {
                         .frame(width: 294.0, height: 88.0)
                         .scaledToFit()
                         .onAppear {
-                            withAnimation(.easeIn(duration: 1.2)) {
+                            withAnimation(.easeIn(duration: 1.8)) {
                                 self.size = 0.9
                                 self.opacity = 1.0
                             }

@@ -26,7 +26,7 @@ struct RegistrationView: View {
 //                    .padding(.top, 5)
 //                customPasswordButton(inputText: "Confirmă parola", inputIconText: "key")
 //                    .padding(.top, 5)
-                customPurpleButton(buttonText: "CREEAZĂ CONT")
+                CustomPurpleButton(buttonText: "CREEAZĂ CONT")
                     .padding(.top, 20)
             }
             Spacer()
