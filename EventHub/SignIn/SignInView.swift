@@ -39,14 +39,11 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
             VStack {
                 CustomMailInput(mail: "Adresa de e-mail", mailText: $emailObj.email, icon: "envelope")
                         .padding(.top, 5)
-//                Text(emailObj.error).foregroundColor(.red)
-//                OnErrorMessage(emailObj: OnErrorMessage.EmailValidationObj())
-                
-                    CustomPasswordInput(password: "Parola", passwordText: $password, icon: "key")
-                        .padding(.top, 5)
-                    CustomPurpleButton(buttonText: "INTRĂ ÎN CONT")
-                        .padding(.top, 10)
-            }
+                CustomPasswordInput(password: "Parola", passwordText: $password, icon: "key")
+                    .padding(.top, -20)
+                CustomPurpleButton(buttonText: "INTRĂ ÎN CONT")
+                    .padding(.top, 10)
+        }
             Spacer()
                 HStack {
                     Text("Nu ai cont?")

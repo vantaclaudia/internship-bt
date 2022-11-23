@@ -11,7 +11,6 @@ import SwiftUI
 struct CustomMailInput: View {
     var mail: String
     var icon: String
-    var key: String = "key"
     @FocusState var isFocused: Bool
     @Binding var mailText: String
     @ObservedObject var emailObj = EmailValidationObj()
@@ -49,15 +48,14 @@ struct CustomMailInput: View {
                             Image("errorExclamation")
                                 .offset(x: -15, y: 0)
                         }
-                            .font(.caption)
 //                            .border(.black)
+                            .font(.caption)
                             .offset(x: -140, y: -5)
-                            .padding(.bottom, -50)
+                            .padding(.bottom, 10)
                             .padding(.top,-5)
                     .frame(width: 366, height: 20)
                 .foregroundColor(Color("errorRedText"))
         }
-//        .padding(.top, -10)
     }
     
 

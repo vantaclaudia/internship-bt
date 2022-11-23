@@ -84,9 +84,9 @@
 				195F1A05292D099B002CF2DD /* AppDelegate.swift */,
 				195F1A07292D099B002CF2DD /* SceneDelegate.swift */,
 				195F1A1D292D0A31002CF2DD /* AppCoordinator.swift */,
-				195F1A1C292D0A02002CF2DD /* Sign in */,
-				195F1A09292D099B002CF2DD /* ViewController.swift */,
+				195F1A1C292D0A02002CF2DD /* SignIn */,
 				195F1A0B292D099B002CF2DD /* Main.storyboard */,
+				195F1A09292D099B002CF2DD /* ViewController.swift */,
 				195F1A11292D099C002CF2DD /* Assets.xcassets */,
 				195F1A13292D099C002CF2DD /* LaunchScreen.storyboard */,
 				195F1A16292D099C002CF2DD /* Info.plist */,
@@ -95,7 +95,7 @@
 			path = EventHub;
 			sourceTree = "<group>";
 		};
-		195F1A1C292D0A02002CF2DD /* Sign in */ = {
+		195F1A1C292D0A02002CF2DD /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
 				195F1A1F292D0ADF002CF2DD /* SignInCoordinator.swift */,
@@ -104,7 +104,7 @@
 				195F1A25292D0B49002CF2DD /* SignInNavigation.swift */,
 				195F1A27292D0B69002CF2DD /* SignInViewModel.swift */,
 			);
-			path = "Sign in";
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		195F1A29292D0E43002CF2DD /* Assets */ = {
