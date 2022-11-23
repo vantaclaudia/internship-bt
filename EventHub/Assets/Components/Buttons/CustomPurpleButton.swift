@@ -1,14 +1,15 @@
 //
-//  customButton.swift
+//  CustomPurpleButton.swift
 //  EventHub
 //
-//  Created by internship on 17.11.2022.
+//  Created by Claudia Vanta on 22.11.2022.
 //
 
+import Foundation
 import SwiftUI
 
 struct CustomPurpleButton: View {
-    public private(set) var buttonText: String 
+    public private(set) var buttonText: String
     
     var body: some View {
         ZStack{

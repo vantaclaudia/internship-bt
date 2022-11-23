@@ -7,32 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B905C37A29226CAB001F22DD /* EventHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C37929226CAB001F22DD /* EventHubApp.swift */; };
-		B905C37C29226CAB001F22DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C37B29226CAB001F22DD /* ContentView.swift */; };
-		B905C37E29226CAD001F22DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905C37D29226CAD001F22DD /* Assets.xcassets */; };
-		B905C38129226CAD001F22DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905C38029226CAD001F22DD /* Preview Assets.xcassets */; };
-		B905C38829227453001F22DD /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C38729227453001F22DD /* SplashScreenView.swift */; };
-		B905C392292671CF001F22DD /* customPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C391292671CF001F22DD /* customPurpleButton.swift */; };
-		B905C3942926A506001F22DD /* customInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C3932926A506001F22DD /* customInputButton.swift */; };
-		B905C3962927881B001F22DD /* customPasswordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C3952927881B001F22DD /* customPasswordButton.swift */; };
-		B905C39829278D8D001F22DD /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B905C39729278D8D001F22DD /* RegistrationView.swift */; };
+		195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A05292D099B002CF2DD /* AppDelegate.swift */; };
+		195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A07292D099B002CF2DD /* SceneDelegate.swift */; };
+		195F1A0A292D099B002CF2DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A09292D099B002CF2DD /* ViewController.swift */; };
+		195F1A0D292D099B002CF2DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195F1A0B292D099B002CF2DD /* Main.storyboard */; };
+		195F1A10292D099B002CF2DD /* EventHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A0E292D099B002CF2DD /* EventHub.xcdatamodeld */; };
+		195F1A12292D099C002CF2DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195F1A11292D099C002CF2DD /* Assets.xcassets */; };
+		195F1A15292D099C002CF2DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195F1A13292D099C002CF2DD /* LaunchScreen.storyboard */; };
+		195F1A1E292D0A31002CF2DD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A1D292D0A31002CF2DD /* AppCoordinator.swift */; };
+		195F1A20292D0ADF002CF2DD /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A1F292D0ADF002CF2DD /* SignInCoordinator.swift */; };
+		195F1A22292D0B18002CF2DD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A21292D0B18002CF2DD /* SignInView.swift */; };
+		195F1A24292D0B31002CF2DD /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A23292D0B31002CF2DD /* SignInRepository.swift */; };
+		195F1A26292D0B49002CF2DD /* SignInNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A25292D0B49002CF2DD /* SignInNavigation.swift */; };
+		195F1A28292D0B69002CF2DD /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A27292D0B69002CF2DD /* SignInViewModel.swift */; };
+		195F1A2E292D0F3F002CF2DD /* CustomPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A2D292D0F3F002CF2DD /* CustomPurpleButton.swift */; };
+		195F1A30292D0F77002CF2DD /* CustomPasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A2F292D0F77002CF2DD /* CustomPasswordInput.swift */; };
+		195F1A32292D1078002CF2DD /* CustomMailInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A31292D1078002CF2DD /* CustomMailInput.swift */; };
+		195F1A34292D48F7002CF2DD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A33292D48F7002CF2DD /* StringExtensions.swift */; };
+		195F1A36292E0661002CF2DD /* OnErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A35292E0661002CF2DD /* OnErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B905C37629226CAB001F22DD /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B905C37929226CAB001F22DD /* EventHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHubApp.swift; sourceTree = "<group>"; };
-		B905C37B29226CAB001F22DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B905C37D29226CAD001F22DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B905C38029226CAD001F22DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B905C38729227453001F22DD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		B905C391292671CF001F22DD /* customPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPurpleButton.swift; sourceTree = "<group>"; };
-		B905C3932926A506001F22DD /* customInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customInputButton.swift; sourceTree = "<group>"; };
-		B905C3952927881B001F22DD /* customPasswordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customPasswordButton.swift; sourceTree = "<group>"; };
-		B905C39729278D8D001F22DD /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		195F1A02292D099B002CF2DD /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		195F1A05292D099B002CF2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		195F1A07292D099B002CF2DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		195F1A09292D099B002CF2DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		195F1A0C292D099B002CF2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		195F1A0F292D099B002CF2DD /* EventHub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventHub.xcdatamodel; sourceTree = "<group>"; };
+		195F1A11292D099C002CF2DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		195F1A14292D099C002CF2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		195F1A16292D099C002CF2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195F1A1D292D0A31002CF2DD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		195F1A1F292D0ADF002CF2DD /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+		195F1A21292D0B18002CF2DD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		195F1A23292D0B31002CF2DD /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
+		195F1A25292D0B49002CF2DD /* SignInNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavigation.swift; sourceTree = "<group>"; };
+		195F1A27292D0B69002CF2DD /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		195F1A2D292D0F3F002CF2DD /* CustomPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPurpleButton.swift; sourceTree = "<group>"; };
+		195F1A2F292D0F77002CF2DD /* CustomPasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordInput.swift; sourceTree = "<group>"; };
+		195F1A31292D1078002CF2DD /* CustomMailInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMailInput.swift; sourceTree = "<group>"; };
+		195F1A33292D48F7002CF2DD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		195F1A35292E0661002CF2DD /* OnErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B905C37329226CAB001F22DD /* Frameworks */ = {
+		195F19FF292D099B002CF2DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,72 +61,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B905C36D29226CAB001F22DD = {
+		195F19F9292D099B002CF2DD = {
 			isa = PBXGroup;
 			children = (
-				B905C37829226CAB001F22DD /* EventHub */,
-				B905C37729226CAB001F22DD /* Products */,
+				195F1A04292D099B002CF2DD /* EventHub */,
+				195F1A03292D099B002CF2DD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B905C37729226CAB001F22DD /* Products */ = {
+		195F1A03292D099B002CF2DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B905C37629226CAB001F22DD /* EventHub.app */,
+				195F1A02292D099B002CF2DD /* EventHub.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B905C37829226CAB001F22DD /* EventHub */ = {
+		195F1A04292D099B002CF2DD /* EventHub */ = {
 			isa = PBXGroup;
 			children = (
-				B905C38F29266DBE001F22DD /* assets */,
-				B905C37929226CAB001F22DD /* EventHubApp.swift */,
-				B905C37B29226CAB001F22DD /* ContentView.swift */,
-				B905C38729227453001F22DD /* SplashScreenView.swift */,
-				B905C37D29226CAD001F22DD /* Assets.xcassets */,
-				B905C37F29226CAD001F22DD /* Preview Content */,
-				B905C39729278D8D001F22DD /* RegistrationView.swift */,
+				195F1A29292D0E43002CF2DD /* Assets */,
+				195F1A05292D099B002CF2DD /* AppDelegate.swift */,
+				195F1A07292D099B002CF2DD /* SceneDelegate.swift */,
+				195F1A1D292D0A31002CF2DD /* AppCoordinator.swift */,
+				195F1A1C292D0A02002CF2DD /* Sign in */,
+				195F1A09292D099B002CF2DD /* ViewController.swift */,
+				195F1A0B292D099B002CF2DD /* Main.storyboard */,
+				195F1A11292D099C002CF2DD /* Assets.xcassets */,
+				195F1A13292D099C002CF2DD /* LaunchScreen.storyboard */,
+				195F1A16292D099C002CF2DD /* Info.plist */,
+				195F1A0E292D099B002CF2DD /* EventHub.xcdatamodeld */,
 			);
 			path = EventHub;
 			sourceTree = "<group>";
 		};
-		B905C37F29226CAD001F22DD /* Preview Content */ = {
+		195F1A1C292D0A02002CF2DD /* Sign in */ = {
 			isa = PBXGroup;
 			children = (
-				B905C38029226CAD001F22DD /* Preview Assets.xcassets */,
+				195F1A1F292D0ADF002CF2DD /* SignInCoordinator.swift */,
+				195F1A21292D0B18002CF2DD /* SignInView.swift */,
+				195F1A23292D0B31002CF2DD /* SignInRepository.swift */,
+				195F1A25292D0B49002CF2DD /* SignInNavigation.swift */,
+				195F1A27292D0B69002CF2DD /* SignInViewModel.swift */,
 			);
-			path = "Preview Content";
+			path = "Sign in";
 			sourceTree = "<group>";
 		};
-		B905C38F29266DBE001F22DD /* assets */ = {
+		195F1A29292D0E43002CF2DD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				B905C39029266DD4001F22DD /* components */,
+				195F1A2A292D0E56002CF2DD /* Components */,
 			);
-			path = assets;
+			path = Assets;
 			sourceTree = "<group>";
 		};
-		B905C39029266DD4001F22DD /* components */ = {
+		195F1A2A292D0E56002CF2DD /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B905C391292671CF001F22DD /* customPurpleButton.swift */,
-				B905C3932926A506001F22DD /* customInputButton.swift */,
-				B905C3952927881B001F22DD /* customPasswordButton.swift */,
+				195F1A2B292D0E5F002CF2DD /* Buttons */,
+				195F1A2C292D0E68002CF2DD /* Inputs */,
+				195F1A33292D48F7002CF2DD /* StringExtensions.swift */,
+				195F1A35292E0661002CF2DD /* OnErrorMessage.swift */,
 			);
-			path = components;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		195F1A2B292D0E5F002CF2DD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				195F1A2D292D0F3F002CF2DD /* CustomPurpleButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		195F1A2C292D0E68002CF2DD /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				195F1A2F292D0F77002CF2DD /* CustomPasswordInput.swift */,
+				195F1A31292D1078002CF2DD /* CustomMailInput.swift */,
+			);
+			path = Inputs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B905C37529226CAB001F22DD /* EventHub */ = {
+		195F1A01292D099B002CF2DD /* EventHub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B905C38429226CAD001F22DD /* Build configuration list for PBXNativeTarget "EventHub" */;
+			buildConfigurationList = 195F1A19292D099C002CF2DD /* Build configuration list for PBXNativeTarget "EventHub" */;
 			buildPhases = (
-				B905C37229226CAB001F22DD /* Sources */,
-				B905C37329226CAB001F22DD /* Frameworks */,
-				B905C37429226CAB001F22DD /* Resources */,
+				195F19FE292D099B002CF2DD /* Sources */,
+				195F19FF292D099B002CF2DD /* Frameworks */,
+				195F1A00292D099B002CF2DD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -115,25 +160,25 @@
 			);
 			name = EventHub;
 			productName = EventHub;
-			productReference = B905C37629226CAB001F22DD /* EventHub.app */;
+			productReference = 195F1A02292D099B002CF2DD /* EventHub.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B905C36E29226CAB001F22DD /* Project object */ = {
+		195F19FA292D099B002CF2DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					B905C37529226CAB001F22DD = {
+					195F1A01292D099B002CF2DD = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
-			buildConfigurationList = B905C37129226CAB001F22DD /* Build configuration list for PBXProject "EventHub" */;
+			buildConfigurationList = 195F19FD292D099B002CF2DD /* Build configuration list for PBXProject "EventHub" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,47 +186,75 @@
 				en,
 				Base,
 			);
-			mainGroup = B905C36D29226CAB001F22DD;
-			productRefGroup = B905C37729226CAB001F22DD /* Products */;
+			mainGroup = 195F19F9292D099B002CF2DD;
+			productRefGroup = 195F1A03292D099B002CF2DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B905C37529226CAB001F22DD /* EventHub */,
+				195F1A01292D099B002CF2DD /* EventHub */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B905C37429226CAB001F22DD /* Resources */ = {
+		195F1A00292D099B002CF2DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B905C38129226CAD001F22DD /* Preview Assets.xcassets in Resources */,
-				B905C37E29226CAD001F22DD /* Assets.xcassets in Resources */,
+				195F1A15292D099C002CF2DD /* LaunchScreen.storyboard in Resources */,
+				195F1A12292D099C002CF2DD /* Assets.xcassets in Resources */,
+				195F1A0D292D099B002CF2DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B905C37229226CAB001F22DD /* Sources */ = {
+		195F19FE292D099B002CF2DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B905C3942926A506001F22DD /* customInputButton.swift in Sources */,
-				B905C392292671CF001F22DD /* customPurpleButton.swift in Sources */,
-				B905C37C29226CAB001F22DD /* ContentView.swift in Sources */,
-				B905C39829278D8D001F22DD /* RegistrationView.swift in Sources */,
-				B905C37A29226CAB001F22DD /* EventHubApp.swift in Sources */,
-				B905C38829227453001F22DD /* SplashScreenView.swift in Sources */,
-				B905C3962927881B001F22DD /* customPasswordButton.swift in Sources */,
+				195F1A0A292D099B002CF2DD /* ViewController.swift in Sources */,
+				195F1A24292D0B31002CF2DD /* SignInRepository.swift in Sources */,
+				195F1A26292D0B49002CF2DD /* SignInNavigation.swift in Sources */,
+				195F1A22292D0B18002CF2DD /* SignInView.swift in Sources */,
+				195F1A28292D0B69002CF2DD /* SignInViewModel.swift in Sources */,
+				195F1A2E292D0F3F002CF2DD /* CustomPurpleButton.swift in Sources */,
+				195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */,
+				195F1A30292D0F77002CF2DD /* CustomPasswordInput.swift in Sources */,
+				195F1A1E292D0A31002CF2DD /* AppCoordinator.swift in Sources */,
+				195F1A10292D099B002CF2DD /* EventHub.xcdatamodeld in Sources */,
+				195F1A34292D48F7002CF2DD /* StringExtensions.swift in Sources */,
+				195F1A20292D0ADF002CF2DD /* SignInCoordinator.swift in Sources */,
+				195F1A36292E0661002CF2DD /* OnErrorMessage.swift in Sources */,
+				195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */,
+				195F1A32292D1078002CF2DD /* CustomMailInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		195F1A0B292D099B002CF2DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				195F1A0C292D099B002CF2DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		195F1A13292D099C002CF2DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				195F1A14292D099C002CF2DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		B905C38229226CAD001F22DD /* Debug */ = {
+		195F1A17292D099C002CF2DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +314,7 @@
 			};
 			name = Debug;
 		};
-		B905C38329226CAD001F22DD /* Release */ = {
+		195F1A18292D099C002CF2DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -295,19 +368,18 @@
 			};
 			name = Release;
 		};
-		B905C38529226CAD001F22DD /* Debug */ = {
+		195F1A1A292D099C002CF2DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"EventHub/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = EventHub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,7 +387,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.claudiavanta.EventHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudia.vanta.EventHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,19 +395,18 @@
 			};
 			name = Debug;
 		};
-		B905C38629226CAD001F22DD /* Release */ = {
+		195F1A1B292D099C002CF2DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"EventHub/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = EventHub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -343,7 +414,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.claudiavanta.EventHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudia.vanta.EventHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,25 +425,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B905C37129226CAB001F22DD /* Build configuration list for PBXProject "EventHub" */ = {
+		195F19FD292D099B002CF2DD /* Build configuration list for PBXProject "EventHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B905C38229226CAD001F22DD /* Debug */,
-				B905C38329226CAD001F22DD /* Release */,
+				195F1A17292D099C002CF2DD /* Debug */,
+				195F1A18292D099C002CF2DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B905C38429226CAD001F22DD /* Build configuration list for PBXNativeTarget "EventHub" */ = {
+		195F1A19292D099C002CF2DD /* Build configuration list for PBXNativeTarget "EventHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B905C38529226CAD001F22DD /* Debug */,
-				B905C38629226CAD001F22DD /* Release */,
+				195F1A1A292D099C002CF2DD /* Debug */,
+				195F1A1B292D099C002CF2DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		195F1A0E292D099B002CF2DD /* EventHub.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				195F1A0F292D099B002CF2DD /* EventHub.xcdatamodel */,
+			);
+			currentVersion = 195F1A0F292D099B002CF2DD /* EventHub.xcdatamodel */;
+			path = EventHub.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = B905C36E29226CAB001F22DD /* Project object */;
+	rootObject = 195F19FA292D099B002CF2DD /* Project object */;
 }

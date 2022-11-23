@@ -1,13 +1,16 @@
 //
-//  customPasswordButton.swift
+//  CustomMailButton.swift
 //  EventHub
 //
-//  Created by internship on 18.11.2022.
+//  Created by Claudia Vanta on 22.11.2022.
 //
+
+import Foundation
+import SwiftUI
 
 import SwiftUI
 
-struct CustomPasswordButton: View {
+struct CustomPasswordInput: View {
     var password: String
     var icon: String
     @FocusState var isFocused: Bool
@@ -24,11 +27,12 @@ struct CustomPasswordButton: View {
         HStack{
             ZStack(alignment: .leading){
                 Text(password)
-                    .foregroundColor(!isFocused || self.password.isEmpty ? Color("borderGrey") : Color("borderGrey"))
-                    .offset(y: !isFocused || self.password.isEmpty ? -2 : -25)
-                    .scaleEffect(!isFocused || self.password.isEmpty ? 1 : 0.81, anchor: .leading)
-                
+                    .foregroundColor(self.passwordText.isEmpty ? Color("borderGrey") : Color("borderGrey"))
+                    .offset(y: !isFocused && self.passwordText.isEmpty ? -2 : -25)
+                    .scaleEffect( !isFocused && self.passwordText.isEmpty ? 1 : 0.85, anchor: .leading)
+                    .animation(!isFocused && self.passwordText.isEmpty ? Animation.easeInOut(duration: 0) : Animation.easeIn(duration: 0.3), value: UUID())
                 SecureField("", text: $passwordText).focused($isFocused, equals: true)
+                    
             }
                 Image(icon).foregroundColor(Color("borderGrey"))
                     .padding()
@@ -40,16 +44,18 @@ struct CustomPasswordButton: View {
     }
     
     func getColor() -> Color {
-        if isFocused {return Color("purple")}
-        else {return Color("borderGrey")}
+        if isFocused {
+            return Color("purple")
+        } else {
+            return Color("borderGrey")
+
+        }
     }
     
 }
 
-    struct customPasswordButton_Previews: PreviewProvider {
+    struct customPasswordInput_Previews: PreviewProvider {
         static var previews: some View {
-            CustomPasswordButton(password: "", passwordText: .constant(""), icon:"")
+            CustomPasswordInput(password: "", passwordText: .constant(""), icon:"")
         }
     }
-
-
