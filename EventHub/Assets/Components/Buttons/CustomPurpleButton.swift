@@ -9,25 +9,29 @@ import Foundation
 import SwiftUI
 
 struct CustomPurpleButton: View {
-    public private(set) var buttonText: String
+    var buttonText: String
+//    var action: () -> Void
+    
+    init(buttonText: String) {
+        self.buttonText = buttonText
+//        self.action = action
+    }
     
     var body: some View {
         ZStack{
             Button(action: {
-                //action
+//                action()
             }) {
-                
-                Text(buttonText).bold()
-                    .padding()
-                    .textCase(.uppercase)
-                    .foregroundColor(.white)
-            }.background(
-                RoundedRectangle(cornerRadius: 16)
-                    .frame(width: 366, height: 64)
-                    .foregroundColor(Color("purple"))
-                
-                    .textCase(.uppercase)
-                    .foregroundColor(.white)
+            Text(buttonText).bold()
+                .padding()
+                .textCase(.uppercase)
+                .foregroundColor(.white)
+            }
+                .background(RoundedRectangle(cornerRadius: 16)
+                .frame(width: 366, height: 64)
+                .foregroundColor(Color("purple"))
+                .textCase(.uppercase)
+                .foregroundColor(.white)
             )
         }
     }
@@ -36,5 +40,6 @@ struct CustomPurpleButton: View {
 struct customButton_Previews: PreviewProvider {
     static var previews: some View {
         CustomPurpleButton(buttonText: "")
+//        { }
     }
 }
