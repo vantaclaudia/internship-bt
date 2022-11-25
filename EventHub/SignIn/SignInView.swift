@@ -7,18 +7,14 @@
 
 import SwiftUI
 
-struct LoginError {
-    var mail: String = ""
-    var password: String = ""
-}
-
 struct SignInView<ViewModel: SignInViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
-    @State private var password = ""
-    @State private var mail = ""
-    @State private var passwordText = ""
-    @State private var mailText = ""
-    @ObservedObject var emailObj = EmailValidationObj()
+//    @State private var signInViewModel = ViewModel
+    
+//    @State private var mailText = ""
+//    @State private var passwordText = ""
+//    @ObservedObject var emailObj = EmailValidationObj()
+//    @ObservedObject var passObj = PasswordValidationObj()
 
     var body: some View {
         NavigationView {
@@ -37,17 +33,25 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
                     .frame(width: 360, height: 29, alignment: .topLeading)
             }
             VStack {
-                CustomMailInput(mail: "Adresa de e-mail", mailText: $emailObj.email, icon: "envelope")
-                        .padding(.top, 5)
-                CustomPasswordInput(password: "Parola", passwordText: $password, icon: "key")
-                    .padding(.top, -20)
+                GenericInput(placeholder: "Adresa de e-mail", icon: "envelope", errorMessage: "",isSecure: false, text: $viewModel.mail)
+                    .padding(.top, 5)
+                GenericInput(placeholder: "Parola", icon: "key", errorMessage: "", isSecure: true, text: $viewModel.password)
+                    .padding(.top, 5)
                 CustomPurpleButton(buttonText: "INTRĂ ÎN CONT")
+//                { }
                     .padding(.top, 10)
+                Text("SAU")
+                    .padding(.top, 15).foregroundColor(Color("borderGrey")).bold()
         }
             Spacer()
                 HStack {
                     Text("Nu ai cont?")
-                    Text("Înregistrează-te")
+                    Button(action: {
+                        //action
+                    }) {
+                        Text("Înregistreaza-te").bold()
+                    }
+                        .foregroundColor(Color("purple"))
                 }
             }
         }
