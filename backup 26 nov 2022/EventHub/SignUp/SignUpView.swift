@@ -35,7 +35,7 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
                 .padding(.top, 5)
                 GenericInput(placeholder: "Confirmă parola", icon: "key", errorMessage: viewModel.confirmPrompt, isSecure: true, text: $viewModel.confirmPassword)
                 .padding(.top, 5)
-                CustomPurpleButton(buttonText: "CREEAZĂ CONT")
+            CustomPurpleButton(buttonText: "CREEAZĂ CONT")
 //                { }
                 .padding(.top, 10)
             Text("SAU")

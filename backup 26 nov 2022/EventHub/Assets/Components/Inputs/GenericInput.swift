@@ -27,25 +27,20 @@ struct GenericInput: View {
         HStack{
             ZStack(alignment: .leading){
                 Text(placeholder)
-                    .foregroundColor(getErrorTextColor())
+                    .foregroundColor(!isFocused || self.text.isEmpty ? Color("borderGrey") : Color("borderGrey"))
                     .offset(y: !isFocused && self.text.isEmpty ? -1 : -20)
-                    .font(.system(size: 15))
                 if isSecure {
-                    SecureField("", text: $text).focused($isFocused, equals: true)
+                    SecureField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none)
                 } else {
                     TextField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none)
                 }
             }
-            Image(icon)
-                .renderingMode(.template)
-                .foregroundColor(getErrorIconColor())
+            Image(icon).foregroundColor(Color("borderGrey"))
                 .padding()
         }
         .padding(.leading)
         .frame(width: 366, height: 64)
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 3).foregroundColor(getBorderColor()))
-        .background(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 0).background(getErrorBackgroundColor()))
-        .cornerRadius(16)
+        .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 2).foregroundColor(getColor()))
         HStack{
             if !text.isEmpty {
                 Text(errorMessage).font(.system(size: 12))
@@ -63,44 +58,8 @@ struct GenericInput: View {
     }
     
     func getColor() -> Color {
-        if isFocused {
+        if isFocused && errorMessage == "" {
             return Color("purple")
-        } else {
-            return Color("borderGrey")
-        }
-    }
-    
-    func getErrorBackgroundColor() -> Color {
-        if isFocused && !text.isEmpty && errorMessage != "" {
-            return Color("errorBackgroundColor")
-        }  else {
-            return Color(.white)
-        }
-    }
-    
-    func getErrorIconColor() -> Color {
-        if isFocused && !text.isEmpty && errorMessage != "" {
-            return Color(.red)
-        }  else {
-            return Color(.gray)
-        }
-    }
-    
-    func getErrorTextColor() -> Color {
-        if isFocused && !text.isEmpty && errorMessage != "" {
-            return Color("errorRedText")
-        }  else {
-            return Color(.gray)
-        }
-    }
-    
-    func getBorderColor() -> Color {
-        if isFocused && text.isEmpty && errorMessage != "" {
-            return Color("purple")
-        } else if isFocused && !text.isEmpty && errorMessage != "" {
-            return Color("errorRedText")
-        } else {
-            return Color("borderGrey")
-        }
+        } else {return Color("borderGrey")}
     }
 }
