@@ -1,29 +1,33 @@
 //
-//  SignInViewModel.swift
+//  SignUpViewModel.swift
 //  EventHub
 //
-//  Created by Claudia Vanta on 22.11.2022.
+//  Created by Claudia Vanta on 23.11.2022.
 //
 
 import SwiftUI
 
-protocol SignInViewModelProtocol: ObservableObject {
+protocol SignUpViewModelProtocol: ObservableObject {
+    var userName: String {get set}
     var mail: String {get set}
     var password: String {get set}
+    var confirmPassword: String {get set}
     var emailPrompt: String {get}
+    var confirmPrompt: String {get}
     var passwordPrompt: String {get}
     func close()
-//    func goToSignUp()
 }
 
-final class SignInViewModel: SignInViewModelProtocol {
+final class SignUpViewModel: SignUpViewModelProtocol {
+    @Published var userName: String = ""
     @Published var mail: String = ""
     @Published var password: String = ""
+    @Published var confirmPassword: String = ""
     
-    let repository: SignInRepositoryProtocol
-    let navigation: SignInNavigationProtocol
-    
-    init(repository: SignInRepositoryProtocol, navigation: SignInNavigationProtocol) {
+    let repository: SignUpRepositoryProtocol
+    let navigation: SignUpNavigationProtocol
+
+    init(repository: SignUpRepositoryProtocol, navigation: SignUpNavigationProtocol) {
         self.repository = repository
         self.navigation = navigation
     }
@@ -34,6 +38,10 @@ final class SignInViewModel: SignInViewModelProtocol {
     
     // MARK: - Validation Functions
     
+    func passwordsMatch() -> Bool {
+        password == confirmPassword
+    }
+    
     func isPasswordValid() -> Bool {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$")
         return passwordTest.evaluate(with: password)
@@ -41,10 +49,23 @@ final class SignInViewModel: SignInViewModelProtocol {
     
     func isEmailValid() -> Bool {
         let emailTest = NSPredicate(format: "SELF MATCHES %@", "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
-        return emailTest.evaluate(with: mail)
+        return emailTest.evaluate(with: mail )
+    }
+    
+    var isSignUpComplete: Bool {
+        if !passwordsMatch() || !isPasswordValid() || !isEmailValid() {return false}
+            else {return true}
     }
     
     // MARK: - Validation messages
+    
+    var confirmPrompt: String {
+        if passwordsMatch() {
+            return ""
+        } else {
+            return "Password fields do not match"
+        }
+    }
     
     var emailPrompt: String {
         if isEmailValid() {

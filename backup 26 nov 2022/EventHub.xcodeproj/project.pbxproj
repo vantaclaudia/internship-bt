@@ -24,6 +24,9 @@
 		195F1A26292D0B49002CF2DD /* SignInNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A25292D0B49002CF2DD /* SignInNavigation.swift */; };
 		195F1A28292D0B69002CF2DD /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A27292D0B69002CF2DD /* SignInViewModel.swift */; };
 		195F1A2E292D0F3F002CF2DD /* CustomPurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A2D292D0F3F002CF2DD /* CustomPurpleButton.swift */; };
+		195F1A30292D0F77002CF2DD /* CustomPasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A2F292D0F77002CF2DD /* CustomPasswordInput.swift */; };
+		195F1A32292D1078002CF2DD /* CustomMailInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A31292D1078002CF2DD /* CustomMailInput.swift */; };
+		195F1A34292D48F7002CF2DD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A33292D48F7002CF2DD /* StringExtensions.swift */; };
 		195F1A3E292E5386002CF2DD /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A3D292E5386002CF2DD /* SignUpCoordinator.swift */; };
 		195F1A40292E53C4002CF2DD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A3F292E53C4002CF2DD /* SignUpView.swift */; };
 		195F1A42292E53FF002CF2DD /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A41292E53FF002CF2DD /* SignUpRepository.swift */; };
@@ -49,6 +52,9 @@
 		195F1A25292D0B49002CF2DD /* SignInNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInNavigation.swift; sourceTree = "<group>"; };
 		195F1A27292D0B69002CF2DD /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		195F1A2D292D0F3F002CF2DD /* CustomPurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPurpleButton.swift; sourceTree = "<group>"; };
+		195F1A2F292D0F77002CF2DD /* CustomPasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordInput.swift; sourceTree = "<group>"; };
+		195F1A31292D1078002CF2DD /* CustomMailInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMailInput.swift; sourceTree = "<group>"; };
+		195F1A33292D48F7002CF2DD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		195F1A3D292E5386002CF2DD /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		195F1A3F292E53C4002CF2DD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		195F1A41292E53FF002CF2DD /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			children = (
 				195F1A2B292D0E5F002CF2DD /* Buttons */,
 				195F1A2C292D0E68002CF2DD /* Inputs */,
+				195F1A33292D48F7002CF2DD /* StringExtensions.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 		195F1A2C292D0E68002CF2DD /* Inputs */ = {
 			isa = PBXGroup;
 			children = (
+				195F1A2F292D0F77002CF2DD /* CustomPasswordInput.swift */,
+				195F1A31292D1078002CF2DD /* CustomMailInput.swift */,
 				193BCB682930C70E00B97B14 /* GenericInput.swift */,
 			);
 			path = Inputs;
@@ -250,12 +259,15 @@
 				195F1A28292D0B69002CF2DD /* SignInViewModel.swift in Sources */,
 				195F1A2E292D0F3F002CF2DD /* CustomPurpleButton.swift in Sources */,
 				195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */,
+				195F1A30292D0F77002CF2DD /* CustomPasswordInput.swift in Sources */,
 				195F1A1E292D0A31002CF2DD /* AppCoordinator.swift in Sources */,
 				195F1A10292D099B002CF2DD /* EventHub.xcdatamodeld in Sources */,
+				195F1A34292D48F7002CF2DD /* StringExtensions.swift in Sources */,
 				195F1A20292D0ADF002CF2DD /* SignInCoordinator.swift in Sources */,
 				195F1A40292E53C4002CF2DD /* SignUpView.swift in Sources */,
 				195F1A3E292E5386002CF2DD /* SignUpCoordinator.swift in Sources */,
 				195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */,
+				195F1A32292D1078002CF2DD /* CustomMailInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
