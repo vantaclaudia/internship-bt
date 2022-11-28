@@ -29,6 +29,8 @@
 		195F1A42292E53FF002CF2DD /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A41292E53FF002CF2DD /* SignUpRepository.swift */; };
 		195F1A44292E5427002CF2DD /* SignUpNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A43292E5427002CF2DD /* SignUpNavigation.swift */; };
 		195F1A46292E544A002CF2DD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A45292E544A002CF2DD /* SignUpViewModel.swift */; };
+		198D76F1293240AD0027100B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 198D76F0293240AD0027100B /* GoogleService-Info.plist */; };
+		198D76F629324FE90027100B /* homePageTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198D76F529324FE90027100B /* homePageTopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		195F1A41292E53FF002CF2DD /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
 		195F1A43292E5427002CF2DD /* SignUpNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNavigation.swift; sourceTree = "<group>"; };
 		195F1A45292E544A002CF2DD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		198D76F0293240AD0027100B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		198D76F529324FE90027100B /* homePageTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePageTopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				195F1A13292D099C002CF2DD /* LaunchScreen.storyboard */,
 				195F1A16292D099C002CF2DD /* Info.plist */,
 				195F1A0E292D099B002CF2DD /* EventHub.xcdatamodeld */,
+				198D76F0293240AD0027100B /* GoogleService-Info.plist */,
 			);
 			path = EventHub;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				193BCB682930C70E00B97B14 /* GenericInput.swift */,
+				198D76F529324FE90027100B /* homePageTopView.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				195F1A15292D099C002CF2DD /* LaunchScreen.storyboard in Resources */,
+				198D76F1293240AD0027100B /* GoogleService-Info.plist in Resources */,
 				195F1A12292D099C002CF2DD /* Assets.xcassets in Resources */,
 				195F1A0D292D099B002CF2DD /* Main.storyboard in Resources */,
 			);
@@ -245,6 +252,7 @@
 				195F1A46292E544A002CF2DD /* SignUpViewModel.swift in Sources */,
 				195F1A24292D0B31002CF2DD /* SignInRepository.swift in Sources */,
 				195F1A26292D0B49002CF2DD /* SignInNavigation.swift in Sources */,
+				198D76F629324FE90027100B /* homePageTopView.swift in Sources */,
 				195F1A22292D0B18002CF2DD /* SignInView.swift in Sources */,
 				195F1A44292E5427002CF2DD /* SignUpNavigation.swift in Sources */,
 				195F1A28292D0B69002CF2DD /* SignInViewModel.swift in Sources */,

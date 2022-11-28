@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignInView<ViewModel: SignInViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
@@ -15,10 +16,10 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
         VStack {
             VStack {
                 Image("splashScreen-logo")
-                    .frame(width: 294.0, height: 88.0)
+                    .frame(width: 240, height: 72)
                     .scaledToFit()
-                    .padding(.top, 30)
-                    .padding(.bottom, 40)
+//                    .padding(.top, 10)
+                    .padding(.bottom, 20)
             }
             VStack {
                 Text("Autentifică-te").bold()
@@ -31,7 +32,9 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
                 .padding(.top, 5)
                 GenericInput(placeholder: "Parola", icon: "key", errorMessage: viewModel.passwordPrompt, isSecure: true, text: $viewModel.password)
                 .padding(.top, 5)
-                CustomPurpleButton(buttonText: "INTRĂ ÎN CONT")
+                CustomPurpleButton(buttonText: "INTRĂ ÎN CONT") {
+                    signIn()
+                }
                     .padding(.top, 10)
                 Text("SAU")
                     .padding(.top, 15).foregroundColor(Color("borderGrey")).bold()
@@ -40,12 +43,20 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
                 HStack {
                     Text("Nu ai cont?")
                     Button(action: {
-                        //action
+                        viewModel.goToSignUp()
                     }) {
                         Text("Înregistreaza-te").bold()
                     }
                         .foregroundColor(Color("purple"))
                 }
+            }
+        }
+    }
+    
+    func signIn() {
+        Auth.auth().createUser(withEmail: viewModel.mail, password: viewModel.password) { result, error in
+            if error != nil {
+                print(error!.localizedDescription)
             }
         }
     }

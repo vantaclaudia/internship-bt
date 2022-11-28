@@ -9,10 +9,12 @@ import Foundation
 
 protocol SignUpNavigationProtocol {
     var onClose: (() -> Void)? { get set}
+    var onGoToSignIn: (() -> Void)? { get set}
     var onGoToSignUp: (() -> Void)? { get set}
 }
 
 struct SignUpNavigation: SignUpNavigationProtocol {
     var onClose: (() -> Void)?
+    var onGoToSignIn: (() -> Void)?
     var onGoToSignUp: (() -> Void)?
 }

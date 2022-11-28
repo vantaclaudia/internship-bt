@@ -43,7 +43,7 @@ struct GenericInput: View {
         }
         .padding(.leading)
         .frame(width: 366, height: 64)
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 3).foregroundColor(getBorderColor()))
+        .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 2).foregroundColor(getBorderColor()))
         .background(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 0).background(getErrorBackgroundColor()))
         .cornerRadius(16)
         HStack{

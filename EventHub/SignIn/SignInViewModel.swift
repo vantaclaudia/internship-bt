@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+//import Firebase
 
 protocol SignInViewModelProtocol: ObservableObject {
     var mail: String {get set}
@@ -13,7 +14,8 @@ protocol SignInViewModelProtocol: ObservableObject {
     var emailPrompt: String {get}
     var passwordPrompt: String {get}
     func close()
-//    func goToSignUp()
+    func goToSignUp()
+//    func signIn()
 }
 
 final class SignInViewModel: SignInViewModelProtocol {
@@ -31,6 +33,21 @@ final class SignInViewModel: SignInViewModelProtocol {
     func close() {
         navigation.onClose?()
     }
+    
+    func goToSignUp() {
+        navigation.onGoToSignUp?()
+    }
+    
+    // MARK: - Firebase connection
+    
+//    func signIn() {
+//        Auth.auth().createUser(withEmail: mail, password: password) {
+//            result, error in
+//            if error != nil {
+//                print(error!.localizedDescription)
+//            }
+//        }
+//    }
     
     // MARK: - Validation Functions
     
