@@ -31,6 +31,7 @@
 		195F1A46292E544A002CF2DD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A45292E544A002CF2DD /* SignUpViewModel.swift */; };
 		198D76F1293240AD0027100B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 198D76F0293240AD0027100B /* GoogleService-Info.plist */; };
 		198D76F629324FE90027100B /* homePageTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198D76F529324FE90027100B /* homePageTopView.swift */; };
+		198D76F82934ECE10027100B /* SearchSettingsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198D76F72934ECE10027100B /* SearchSettingsComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		195F1A45292E544A002CF2DD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		198D76F0293240AD0027100B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		198D76F529324FE90027100B /* homePageTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePageTopView.swift; sourceTree = "<group>"; };
+		198D76F72934ECE10027100B /* SearchSettingsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettingsComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				195F1A05292D099B002CF2DD /* AppDelegate.swift */,
 				195F1A07292D099B002CF2DD /* SceneDelegate.swift */,
 				195F1A1D292D0A31002CF2DD /* AppCoordinator.swift */,
+				198D76F92934FD1C0027100B /* Home */,
 				195F1A3C292E5339002CF2DD /* SignUp */,
 				195F1A1C292D0A02002CF2DD /* SignIn */,
 				195F1A0B292D099B002CF2DD /* Main.storyboard */,
@@ -151,6 +154,7 @@
 			children = (
 				193BCB682930C70E00B97B14 /* GenericInput.swift */,
 				198D76F529324FE90027100B /* homePageTopView.swift */,
+				198D76F72934ECE10027100B /* SearchSettingsComponent.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -165,6 +169,13 @@
 				195F1A45292E544A002CF2DD /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		198D76F92934FD1C0027100B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 				195F1A46292E544A002CF2DD /* SignUpViewModel.swift in Sources */,
 				195F1A24292D0B31002CF2DD /* SignInRepository.swift in Sources */,
 				195F1A26292D0B49002CF2DD /* SignInNavigation.swift in Sources */,
+				198D76F82934ECE10027100B /* SearchSettingsComponent.swift in Sources */,
 				198D76F629324FE90027100B /* homePageTopView.swift in Sources */,
 				195F1A22292D0B18002CF2DD /* SignInView.swift in Sources */,
 				195F1A44292E5427002CF2DD /* SignUpNavigation.swift in Sources */,

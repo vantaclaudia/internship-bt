@@ -16,10 +16,10 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
         VStack {
             VStack {
                 Image("splashScreen-logo")
+                    .resizable()
                     .frame(width: 240, height: 72)
                     .scaledToFit()
-//                    .padding(.top, 10)
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 30)
             }
             VStack {
                 Text("Autentifică-te").bold()
