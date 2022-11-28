@@ -8,8 +8,9 @@
 import UIKit
 import SwiftUI
 
-final class SignupCoordinator {
+final class SignUpCoordinator {
     let navController: UINavigationController
+    var signInCoordinator: SignInCoordinator?
 
     init(navController: UINavigationController) {
         self.navController = navController
@@ -18,16 +19,14 @@ final class SignupCoordinator {
     func start() {
         let repository = SignUpRepository()
         var navigation = SignUpNavigation()
-//        var signUpNavigation = SignInNavigation()
-
-//        signUpNavigation.goToSignUp = { [weak self] in
-//            self?.navController.popViewController(animated: true)
-//            print("Should Close SignUpScreen")
-//        }
-        
+ 
         navigation.onClose = { [weak self] in
             self?.navController.popViewController(animated: true)
             print("Should Close SignUpScreen")
+        }
+        
+        navigation.onGoToSignIn = { [weak self] in
+            self?.onGoToSignIn()
         }
 
         let viewModel = SignUpViewModel(repository: repository, navigation: navigation)
@@ -35,5 +34,9 @@ final class SignupCoordinator {
         let viewController = UIHostingController(rootView: view)
 
         navController.pushViewController(viewController, animated: true)
+    }
+    
+    func onGoToSignIn() {
+        navController.popViewController(animated: true)
     }
 }
