@@ -1,34 +1,33 @@
 //
-//  homePageTopView.swift
+//  SignUpView.swift
 //  EventHub
 //
-//  Created by Claudia Vanta on 26.11.2022.
+//  Created by Claudia Vanta on 23.11.2022.
 //
 
 import SwiftUI
-import Foundation
 
-struct homePageTopView: View {
-    let releaseDate = Date()
+struct HomeView<ViewModel: HomeViewModelProtocol>: View {
+    @ObservedObject var viewModel: ViewModel
     
-    static let stackDateFormat: DateFormatter = {
-            let formatter = DateFormatter()
-            formatter.locale = .current
-            formatter.dateFormat = "EEEE, d MMM"
-            
-            return formatter
-        }()
+    let releaseDate = Date()
+    let stackDateFormat: DateFormatter = {
+    let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, d MMM"
+        formatter.locale = Locale(identifier: "ro_RO")
+        return formatter
+    }()
     
     var body: some View {
         VStack {
             VStack(alignment: .leading){
                 HStack {
-                    Text("\(releaseDate, formatter: Self.stackDateFormat)").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12)).textCase(.uppercase)
+                    Text("\(releaseDate, formatter: self.stackDateFormat)").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12)).textCase(.uppercase)
                     Image("cloud")
                     Text("16°C").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 13))
                 }.padding(.top, -20)
                 HStack{
-                    Text("Oradea, România").fontWeight(.bold).foregroundColor(.white).font(.system(size: 24))
+                    Text("Oradea, România").fontWeight(.bold).foregroundColor(.white).font(.system(size: 24)).padding(.top, -10)
                     HStack{
                         Image("gps").foregroundColor(.black).padding(-10)
                         Text("Schimbă").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12))
@@ -41,7 +40,8 @@ struct homePageTopView: View {
                 }
                 HStack{
                     SearchSettingsComponent()
-                }.padding(.top, -10)
+                }
+                .padding(.top, -20)
                 HStack{
                     //colored buttons
                 }.padding(.top, 10)
@@ -57,11 +57,8 @@ struct homePageTopView: View {
     }
 }
 
-struct homePageTopView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-//        VStack{
-            homePageTopView()
-//            Spacer()
-//        }
+        HomeView(viewModel: HomeViewModel(repository: HomeRepository(), navigation: HomeNavigation()))
     }
 }

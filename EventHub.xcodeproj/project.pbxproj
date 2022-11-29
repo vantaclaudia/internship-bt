@@ -10,6 +10,11 @@
 		193BCB612930BC4F00B97B14 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 193BCB602930BC4F00B97B14 /* FirebaseAuth */; };
 		193BCB632930BC4F00B97B14 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 193BCB622930BC4F00B97B14 /* FirebaseFirestore */; };
 		193BCB692930C70E00B97B14 /* GenericInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BCB682930C70E00B97B14 /* GenericInput.swift */; };
+		195291D52935009C0036B3D9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291D42935009C0036B3D9 /* HomeCoordinator.swift */; };
+		195291D7293500A90036B3D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291D6293500A90036B3D9 /* HomeView.swift */; };
+		195291D9293500B50036B3D9 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291D8293500B50036B3D9 /* HomeRepository.swift */; };
+		195291DB293500C00036B3D9 /* HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291DA293500C00036B3D9 /* HomeNavigation.swift */; };
+		195291DD293500CD0036B3D9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291DC293500CD0036B3D9 /* HomeViewModel.swift */; };
 		195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A05292D099B002CF2DD /* AppDelegate.swift */; };
 		195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A07292D099B002CF2DD /* SceneDelegate.swift */; };
 		195F1A0A292D099B002CF2DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A09292D099B002CF2DD /* ViewController.swift */; };
@@ -30,12 +35,16 @@
 		195F1A44292E5427002CF2DD /* SignUpNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A43292E5427002CF2DD /* SignUpNavigation.swift */; };
 		195F1A46292E544A002CF2DD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A45292E544A002CF2DD /* SignUpViewModel.swift */; };
 		198D76F1293240AD0027100B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 198D76F0293240AD0027100B /* GoogleService-Info.plist */; };
-		198D76F629324FE90027100B /* homePageTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198D76F529324FE90027100B /* homePageTopView.swift */; };
 		198D76F82934ECE10027100B /* SearchSettingsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198D76F72934ECE10027100B /* SearchSettingsComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		193BCB682930C70E00B97B14 /* GenericInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInput.swift; sourceTree = "<group>"; };
+		195291D42935009C0036B3D9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		195291D6293500A90036B3D9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		195291D8293500B50036B3D9 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		195291DA293500C00036B3D9 /* HomeNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigation.swift; sourceTree = "<group>"; };
+		195291DC293500CD0036B3D9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		195F1A02292D099B002CF2DD /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		195F1A05292D099B002CF2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		195F1A07292D099B002CF2DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +67,6 @@
 		195F1A43292E5427002CF2DD /* SignUpNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNavigation.swift; sourceTree = "<group>"; };
 		195F1A45292E544A002CF2DD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		198D76F0293240AD0027100B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		198D76F529324FE90027100B /* homePageTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePageTopView.swift; sourceTree = "<group>"; };
 		198D76F72934ECE10027100B /* SearchSettingsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSettingsComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				193BCB682930C70E00B97B14 /* GenericInput.swift */,
-				198D76F529324FE90027100B /* homePageTopView.swift */,
 				198D76F72934ECE10027100B /* SearchSettingsComponent.swift */,
 			);
 			path = Inputs;
@@ -174,6 +181,11 @@
 		198D76F92934FD1C0027100B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				195291D42935009C0036B3D9 /* HomeCoordinator.swift */,
+				195291D6293500A90036B3D9 /* HomeView.swift */,
+				195291D8293500B50036B3D9 /* HomeRepository.swift */,
+				195291DA293500C00036B3D9 /* HomeNavigation.swift */,
+				195291DC293500CD0036B3D9 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -264,16 +276,20 @@
 				195F1A24292D0B31002CF2DD /* SignInRepository.swift in Sources */,
 				195F1A26292D0B49002CF2DD /* SignInNavigation.swift in Sources */,
 				198D76F82934ECE10027100B /* SearchSettingsComponent.swift in Sources */,
-				198D76F629324FE90027100B /* homePageTopView.swift in Sources */,
 				195F1A22292D0B18002CF2DD /* SignInView.swift in Sources */,
 				195F1A44292E5427002CF2DD /* SignUpNavigation.swift in Sources */,
+				195291D9293500B50036B3D9 /* HomeRepository.swift in Sources */,
 				195F1A28292D0B69002CF2DD /* SignInViewModel.swift in Sources */,
 				195F1A2E292D0F3F002CF2DD /* CustomPurpleButton.swift in Sources */,
 				195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */,
 				195F1A1E292D0A31002CF2DD /* AppCoordinator.swift in Sources */,
 				195F1A10292D099B002CF2DD /* EventHub.xcdatamodeld in Sources */,
+				195291D7293500A90036B3D9 /* HomeView.swift in Sources */,
+				195291DB293500C00036B3D9 /* HomeNavigation.swift in Sources */,
 				195F1A20292D0ADF002CF2DD /* SignInCoordinator.swift in Sources */,
+				195291DD293500CD0036B3D9 /* HomeViewModel.swift in Sources */,
 				195F1A40292E53C4002CF2DD /* SignUpView.swift in Sources */,
+				195291D52935009C0036B3D9 /* HomeCoordinator.swift in Sources */,
 				195F1A3E292E5386002CF2DD /* SignUpCoordinator.swift in Sources */,
 				195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */,
 			);
@@ -305,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -365,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

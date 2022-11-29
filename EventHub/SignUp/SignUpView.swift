@@ -32,6 +32,8 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
                 CustomPurpleButton(buttonText: "CREEAZĂ CONT"){
                     signUp()
                 }
+                .opacity(viewModel.isSignUpComplete ? 1 : 0.6)
+                .disabled(!viewModel.isSignUpComplete)
                 .padding(.top, 10)
             Text("SAU")
                 .padding(.top, 15).foregroundColor(Color("borderGrey")).bold()
@@ -53,7 +55,12 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
     func signUp() {
         Auth.auth().createUser(withEmail: viewModel.mail, password: viewModel.password) { result, error in
             if error != nil {
-                print(error!.localizedDescription)
+                let alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default) { (_) in }
+                alert.addAction(ok)
+                UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
+            }  else {
+                viewModel.goToHome()
             }
         }
     }

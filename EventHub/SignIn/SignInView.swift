@@ -35,7 +35,9 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
                 CustomPurpleButton(buttonText: "INTRĂ ÎN CONT") {
                     signIn()
                 }
-                    .padding(.top, 10)
+                .opacity(viewModel.isSignUpComplete ? 1 : 0.6)
+                .disabled(!viewModel.isSignUpComplete)
+                .padding(.top, 10)
                 Text("SAU")
                     .padding(.top, 15).foregroundColor(Color("borderGrey")).bold()
         }
@@ -45,7 +47,7 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
                     Button(action: {
                         viewModel.goToSignUp()
                     }) {
-                        Text("Înregistreaza-te").bold()
+                        Text("Înregistrează-te").bold()
                     }
                         .foregroundColor(Color("purple"))
                 }
@@ -54,9 +56,14 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
     }
     
     func signIn() {
-        Auth.auth().createUser(withEmail: viewModel.mail, password: viewModel.password) { result, error in
+        Auth.auth().signIn(withEmail: viewModel.mail, password: viewModel.password) { result, error in
             if error != nil {
-                print(error!.localizedDescription)
+                let alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default) { (_) in }
+                alert.addAction(ok)
+                UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
+            } else {
+                viewModel.goToHome()
             }
         }
     }

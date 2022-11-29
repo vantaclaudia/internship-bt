@@ -6,16 +6,16 @@
 //
 
 import SwiftUI
-//import Firebase
 
 protocol SignInViewModelProtocol: ObservableObject {
     var mail: String {get set}
     var password: String {get set}
     var emailPrompt: String {get}
     var passwordPrompt: String {get}
+    var isSignUpComplete: Bool {get}
     func close()
     func goToSignUp()
-//    func signIn()
+    func goToHome()
 }
 
 final class SignInViewModel: SignInViewModelProtocol {
@@ -38,17 +38,10 @@ final class SignInViewModel: SignInViewModelProtocol {
         navigation.onGoToSignUp?()
     }
     
-    // MARK: - Firebase connection
-    
-//    func signIn() {
-//        Auth.auth().createUser(withEmail: mail, password: password) {
-//            result, error in
-//            if error != nil {
-//                print(error!.localizedDescription)
-//            }
-//        }
-//    }
-    
+    func goToHome() {
+        navigation.onGoToHome?()
+    }
+
     // MARK: - Validation Functions
     
     func isPasswordValid() -> Bool {
@@ -59,6 +52,10 @@ final class SignInViewModel: SignInViewModelProtocol {
     func isEmailValid() -> Bool {
         let emailTest = NSPredicate(format: "SELF MATCHES %@", "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
         return emailTest.evaluate(with: mail)
+    }
+    
+    var isSignUpComplete: Bool {
+        if !isPasswordValid() || !isEmailValid() {return false} else {return true}
     }
     
     // MARK: - Validation messages

@@ -31,9 +31,9 @@ struct GenericInput: View {
                     .offset(y: !isFocused && self.text.isEmpty ? -1 : -20)
                     .font(.system(size: 15))
                 if isSecure {
-                    SecureField("", text: $text).focused($isFocused, equals: true)
+                    SecureField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none).disableAutocorrection(true)
                 } else {
-                    TextField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none)
+                    TextField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none).disableAutocorrection(true)
                 }
             }
             Image(icon)

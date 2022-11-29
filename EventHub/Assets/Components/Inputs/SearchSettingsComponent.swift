@@ -19,8 +19,8 @@ struct SearchSettingsComponent: View {
                             .renderingMode(.template)
                             .foregroundColor(Color("lightPurple"))
                         
-                        Text("Cauti dupa \(searchText)")
-                            .searchable(text: $searchText, prompt: "Cauta un eveniment")
+                        Text("Caută evenimente")
+//                            .searchable(text: $searchText, prompt: "Cauta un eveniment")
                             .foregroundColor(Color("lightPurple"))
                         //                    .offset(y: !isFocused && self.text.isEmpty ? -1 : -20)
                             .font(.system(size: 14))
