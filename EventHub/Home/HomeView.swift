@@ -33,15 +33,10 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                         Text("Schimbă").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12))
                     }.padding(.leading, 90).padding(.bottom, 20)
                 }
-                HStack {
-                    Text("").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12))
-                    Image("")
-                    Text("").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 13))
-                }
                 HStack{
                     SearchSettingsComponent(searchText: $viewModel.searchText)
                 }
-                .padding(.top, -25)
+                .padding(.top, -10)
                 HStack{
                     ColoredButton(buttonText: "Astăzi", buttonColor: Color("lightGreen"))
                     ColoredButton(buttonText: "Mâine", buttonColor: Color("lightOrange"))
@@ -55,6 +50,14 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                 LinearGradient(gradient: Gradient(colors: [Color("purple"), Color("darkPurple")]), startPoint: .top, endPoint: .bottom).cornerRadius(33).ignoresSafeArea(edges: .top)
             )
             .frame(maxWidth: .infinity)
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Top 10 evenimente în această săptămână")
+                        .font(.system(size: 16))
+                }.padding(.top, 5)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading, 25)
             Spacer()
         }
     }
