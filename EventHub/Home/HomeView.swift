@@ -27,7 +27,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                     Text("16°C").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 13))
                 }.padding(.top, -20)
                 HStack{
-                    Text("Oradea, România").fontWeight(.bold).foregroundColor(.white).font(.system(size: 24)).padding(.top, -10)
+                    Text("Oradea, România").fontWeight(.bold).foregroundColor(.white).font(.system(size: 24)).padding(.top, -20)
                     HStack{
                         Image("gps").foregroundColor(.black).padding(-10)
                         Text("Schimbă").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12))
@@ -39,14 +39,17 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                     Text("").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 13))
                 }
                 HStack{
-                    SearchSettingsComponent()
+                    SearchSettingsComponent(searchText: $viewModel.searchText)
                 }
-                .padding(.top, -20)
+                .padding(.top, -25)
                 HStack{
-                    //colored buttons
-                }.padding(.top, 10)
+                    ColoredButton(buttonText: "Astăzi", buttonColor: Color("lightGreen"))
+                    ColoredButton(buttonText: "Mâine", buttonColor: Color("lightOrange"))
+                    ColoredButton(buttonText: "Săptămâna aceasta", buttonColor: Color("errorRedText"))
+                }
+                .padding(.bottom, -10)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity)
             .padding()
             .background(
                 LinearGradient(gradient: Gradient(colors: [Color("purple"), Color("darkPurple")]), startPoint: .top, endPoint: .bottom).cornerRadius(33).ignoresSafeArea(edges: .top)

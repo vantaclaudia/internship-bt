@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchSettingsComponent: View {
-    @State private var searchText = ""
+    @Binding var searchText: String
     
     var body: some View {
         HStack{
@@ -18,13 +18,28 @@ struct SearchSettingsComponent: View {
                         Image("search")
                             .renderingMode(.template)
                             .foregroundColor(Color("lightPurple"))
-                        
-                        Text("Caută evenimente")
-//                            .searchable(text: $searchText, prompt: "Cauta un eveniment")
-                            .foregroundColor(Color("lightPurple"))
-                        //                    .offset(y: !isFocused && self.text.isEmpty ? -1 : -20)
-                            .font(.system(size: 14))
-                    }.frame(maxWidth: .infinity, alignment: .leading)
+                        ZStack(alignment: .leading) {
+                            if searchText.isEmpty {
+                                Text("Caută evenimente")
+                                .foregroundColor(Color("lightPurple"))
+                                .font(.system(size: 14))
+                            }
+                            TextField("", text: $searchText)
+                                .foregroundColor(Color("lightPurple"))
+                                .font(.system(size: 14))
+                                .overlay(
+                                    Image(systemName: "xmark.circle.fill")
+                                        .padding()
+                                        .offset(x: 110)
+                                        .foregroundColor(Color("lightPurple"))
+                                        .opacity(searchText.isEmpty ? 0.0 : 5)
+                                        .onTapGesture {
+                                            searchText = ""
+                                        })
+                        }
+                    }
+                    .foregroundColor(Color("lightPurple"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
             .padding(.leading)
@@ -50,6 +65,6 @@ struct SearchSettingsComponent: View {
 
 struct SearchSettingsComponent_Previews: PreviewProvider {
     static var previews: some View {
-        SearchSettingsComponent()
+        SearchSettingsComponent(searchText: .constant(""))
     }
 }

@@ -15,6 +15,8 @@
 		195291D9293500B50036B3D9 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291D8293500B50036B3D9 /* HomeRepository.swift */; };
 		195291DB293500C00036B3D9 /* HomeNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291DA293500C00036B3D9 /* HomeNavigation.swift */; };
 		195291DD293500CD0036B3D9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291DC293500CD0036B3D9 /* HomeViewModel.swift */; };
+		195291E12937719F0036B3D9 /* HomeNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291E02937719F0036B3D9 /* HomeNewView.swift */; };
+		195291E329378AE90036B3D9 /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291E229378AE90036B3D9 /* ColoredButton.swift */; };
 		195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A05292D099B002CF2DD /* AppDelegate.swift */; };
 		195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A07292D099B002CF2DD /* SceneDelegate.swift */; };
 		195F1A0A292D099B002CF2DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A09292D099B002CF2DD /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 		195291D8293500B50036B3D9 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		195291DA293500C00036B3D9 /* HomeNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigation.swift; sourceTree = "<group>"; };
 		195291DC293500CD0036B3D9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		195291E02937719F0036B3D9 /* HomeNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewView.swift; sourceTree = "<group>"; };
+		195291E229378AE90036B3D9 /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
 		195F1A02292D099B002CF2DD /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		195F1A05292D099B002CF2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		195F1A07292D099B002CF2DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			children = (
 				193BCB682930C70E00B97B14 /* GenericInput.swift */,
 				198D76F72934ECE10027100B /* SearchSettingsComponent.swift */,
+				195291E229378AE90036B3D9 /* ColoredButton.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			children = (
 				195291D42935009C0036B3D9 /* HomeCoordinator.swift */,
 				195291D6293500A90036B3D9 /* HomeView.swift */,
+				195291E02937719F0036B3D9 /* HomeNewView.swift */,
 				195291D8293500B50036B3D9 /* HomeRepository.swift */,
 				195291DA293500C00036B3D9 /* HomeNavigation.swift */,
 				195291DC293500CD0036B3D9 /* HomeViewModel.swift */,
@@ -271,6 +277,7 @@
 			files = (
 				195F1A0A292D099B002CF2DD /* ViewController.swift in Sources */,
 				195F1A42292E53FF002CF2DD /* SignUpRepository.swift in Sources */,
+				195291E12937719F0036B3D9 /* HomeNewView.swift in Sources */,
 				193BCB692930C70E00B97B14 /* GenericInput.swift in Sources */,
 				195F1A46292E544A002CF2DD /* SignUpViewModel.swift in Sources */,
 				195F1A24292D0B31002CF2DD /* SignInRepository.swift in Sources */,
@@ -288,6 +295,7 @@
 				195291DB293500C00036B3D9 /* HomeNavigation.swift in Sources */,
 				195F1A20292D0ADF002CF2DD /* SignInCoordinator.swift in Sources */,
 				195291DD293500CD0036B3D9 /* HomeViewModel.swift in Sources */,
+				195291E329378AE90036B3D9 /* ColoredButton.swift in Sources */,
 				195F1A40292E53C4002CF2DD /* SignUpView.swift in Sources */,
 				195291D52935009C0036B3D9 /* HomeCoordinator.swift in Sources */,
 				195F1A3E292E5386002CF2DD /* SignUpCoordinator.swift in Sources */,

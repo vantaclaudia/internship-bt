@@ -8,10 +8,13 @@
 import SwiftUI
 
 protocol HomeViewModelProtocol: ObservableObject {
+    var searchText: String {get set}
     func close()
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
+    @Published var searchText: String = ""
+    
     let repository: HomeRepositoryProtocol
     let navigation: HomeNavigationProtocol
 
