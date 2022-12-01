@@ -19,47 +19,99 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
     }()
     
     var body: some View {
-        VStack {
-            VStack(alignment: .leading){
-                HStack {
-                    Text("\(releaseDate, formatter: self.stackDateFormat)").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12)).textCase(.uppercase)
-                    Image("cloud")
-                    Text("16°C").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 13))
-                }.padding(.top, -20)
-                HStack{
-                    Text("Oradea, România").fontWeight(.bold).foregroundColor(.white).font(.system(size: 24)).padding(.top, -20)
+            VStack {
+                // START TOP NAVIGATION
+                VStack(alignment: .leading){
+                    HStack {
+                        Text("\(releaseDate, formatter: self.stackDateFormat)").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12)).textCase(.uppercase)
+                        Image("cloud")
+                        Text("16°C").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 13))
+                    }.padding(.top, -20)
                     HStack{
-                        Image("gps").foregroundColor(.black).padding(-10)
-                        Text("Schimbă").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12))
-                    }.padding(.leading, 90).padding(.bottom, 20)
+                        Text("Oradea, România").fontWeight(.bold).foregroundColor(.white).font(.system(size: 24)).padding(.top, -20)
+                        HStack{
+                            Image("gps").foregroundColor(.black).padding(-10)
+                            Text("Schimbă").fontWeight(.bold).foregroundColor(Color("lightPurple")).font(.system(size: 12))
+                        }.padding(.leading, 90).padding(.bottom, 20)
+                    }
+                    HStack{
+                        SearchSettingsComponent(searchText: $viewModel.searchText)
+                    }
+                    .padding(.top, -10)
+                    HStack{
+                        ColoredButton(buttonText: "Astăzi", buttonColor: Color("lightGreen"))
+                        ColoredButton(buttonText: "Mâine", buttonColor: Color("lightOrange"))
+                        ColoredButton(buttonText: "Săptămâna aceasta", buttonColor: Color("errorRedText"))
+                    }
+                    .padding(.bottom, -10)
                 }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(
+                    LinearGradient(gradient: Gradient(colors: [Color("purple"), Color("darkPurple")]), startPoint: .top, endPoint: .bottom).cornerRadius(33).ignoresSafeArea(edges: .top)
+                )
+                .frame(maxWidth: .infinity)
+                // END TOP NAVIGATION
+                
+                ScrollView(showsIndicators: false) {
+                // TOP 10 EVENIMENTE
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Top 10 evenimente în această săptămână")
+                            .font(.system(size: 16))
+                    }.padding(.top, 5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    HStack{
+                        TopTenEvents()
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 13)
+                .padding(.bottom, 15)
+                    
+                // EVENIMENTE POPULARE
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Evenimente populare 🔥")
+                            .font(.system(size: 16))
+                    }.padding(.top, 5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    HStack{
+                        PopularEvents()
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 15)
+                .padding(.bottom, 15)
+                    
+                // EVENIMENT RECOMANDAT
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Eveniment recomandat 🌟")
+                            .font(.system(size: 16))
+                    }.padding(.top, 5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    HStack{
+                        RecomandedEvents()
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 13)
+                    
+                // ADAUGA EVENIMENT
                 HStack{
-                    SearchSettingsComponent(searchText: $viewModel.searchText)
+                    AddEvent().padding(.top, 10)
                 }
-                .padding(.top, -10)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                //BOTTOM BAR
                 HStack{
-                    ColoredButton(buttonText: "Astăzi", buttonColor: Color("lightGreen"))
-                    ColoredButton(buttonText: "Mâine", buttonColor: Color("lightOrange"))
-                    ColoredButton(buttonText: "Săptămâna aceasta", buttonColor: Color("errorRedText"))
+                    BottomBar()
                 }
-                .padding(.bottom, -10)
+                .frame(maxWidth: .infinity, alignment: .center)
+                Spacer()
             }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(
-                LinearGradient(gradient: Gradient(colors: [Color("purple"), Color("darkPurple")]), startPoint: .top, endPoint: .bottom).cornerRadius(33).ignoresSafeArea(edges: .top)
-            )
-            .frame(maxWidth: .infinity)
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Top 10 evenimente în această săptămână")
-                        .font(.system(size: 16))
-                }.padding(.top, 5)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 25)
-            Spacer()
-        }
+        }.background(Color("dashboardBackground"))
     }
 }
 
