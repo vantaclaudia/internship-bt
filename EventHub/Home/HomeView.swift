@@ -111,7 +111,10 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 Spacer()
             }
-        }.background(Color("dashboardBackground"))
+        }
+        .background(Color("dashboardBackground"))
+        . navigationBarBackButtonHidden(true)
+        .padding(.top, -30)
     }
 }
 
