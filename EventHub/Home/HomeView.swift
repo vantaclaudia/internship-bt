@@ -100,7 +100,8 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                     
                 // ADAUGA EVENIMENT
                 HStack{
-                    AddEvent().padding(.top, 10)
+                    AddEvent()
+                        .padding(.top, 10)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                     

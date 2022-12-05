@@ -26,6 +26,10 @@
 		195291F42938B87A0036B3D9 /* RecomandedEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291F32938B87A0036B3D9 /* RecomandedEvents.swift */; };
 		195291F62938C29C0036B3D9 /* AddEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291F52938C29C0036B3D9 /* AddEvent.swift */; };
 		195291F82938D5490036B3D9 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291F72938D5490036B3D9 /* BottomBar.swift */; };
+		195291FA2938E6BC0036B3D9 /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291F92938E6BC0036B3D9 /* DateTimePicker.swift */; };
+		195291FC2939119A0036B3D9 /* PureTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291FB2939119A0036B3D9 /* PureTextInput.swift */; };
+		195291FE293DDC030036B3D9 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291FD293DDC030036B3D9 /* TimePicker.swift */; };
+		19529200293E12C70036B3D9 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291FF293E12C70036B3D9 /* PhotoPicker.swift */; };
 		195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A05292D099B002CF2DD /* AppDelegate.swift */; };
 		195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A07292D099B002CF2DD /* SceneDelegate.swift */; };
 		195F1A0A292D099B002CF2DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A09292D099B002CF2DD /* ViewController.swift */; };
@@ -67,6 +71,10 @@
 		195291F32938B87A0036B3D9 /* RecomandedEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandedEvents.swift; sourceTree = "<group>"; };
 		195291F52938C29C0036B3D9 /* AddEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvent.swift; sourceTree = "<group>"; };
 		195291F72938D5490036B3D9 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		195291F92938E6BC0036B3D9 /* DateTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimePicker.swift; sourceTree = "<group>"; };
+		195291FB2939119A0036B3D9 /* PureTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureTextInput.swift; sourceTree = "<group>"; };
+		195291FD293DDC030036B3D9 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		195291FF293E12C70036B3D9 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		195F1A02292D099B002CF2DD /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		195F1A05292D099B002CF2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		195F1A07292D099B002CF2DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +211,10 @@
 				195291F32938B87A0036B3D9 /* RecomandedEvents.swift */,
 				195291F52938C29C0036B3D9 /* AddEvent.swift */,
 				195291F72938D5490036B3D9 /* BottomBar.swift */,
+				195291F92938E6BC0036B3D9 /* DateTimePicker.swift */,
+				195291FB2939119A0036B3D9 /* PureTextInput.swift */,
+				195291FD293DDC030036B3D9 /* TimePicker.swift */,
+				195291FF293E12C70036B3D9 /* PhotoPicker.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -320,6 +332,7 @@
 				195F1A24292D0B31002CF2DD /* SignInRepository.swift in Sources */,
 				195291F82938D5490036B3D9 /* BottomBar.swift in Sources */,
 				195F1A26292D0B49002CF2DD /* SignInNavigation.swift in Sources */,
+				195291FE293DDC030036B3D9 /* TimePicker.swift in Sources */,
 				198D76F82934ECE10027100B /* SearchSettingsComponent.swift in Sources */,
 				195F1A22292D0B18002CF2DD /* SignInView.swift in Sources */,
 				195F1A44292E5427002CF2DD /* SignUpNavigation.swift in Sources */,
@@ -336,14 +349,17 @@
 				195F1A20292D0ADF002CF2DD /* SignInCoordinator.swift in Sources */,
 				195291E82937B7870036B3D9 /* CreateEventView.swift in Sources */,
 				195291DD293500CD0036B3D9 /* HomeViewModel.swift in Sources */,
+				195291FA2938E6BC0036B3D9 /* DateTimePicker.swift in Sources */,
 				195291F42938B87A0036B3D9 /* RecomandedEvents.swift in Sources */,
 				195291E329378AE90036B3D9 /* ColoredButton.swift in Sources */,
 				195291F02937D5560036B3D9 /* TopTenEvents.swift in Sources */,
 				195F1A40292E53C4002CF2DD /* SignUpView.swift in Sources */,
+				19529200293E12C70036B3D9 /* PhotoPicker.swift in Sources */,
 				195291EC2937B7A60036B3D9 /* CreateEventNavigation.swift in Sources */,
 				195291D52935009C0036B3D9 /* HomeCoordinator.swift in Sources */,
 				195F1A3E292E5386002CF2DD /* SignUpCoordinator.swift in Sources */,
 				195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */,
+				195291FC2939119A0036B3D9 /* PureTextInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

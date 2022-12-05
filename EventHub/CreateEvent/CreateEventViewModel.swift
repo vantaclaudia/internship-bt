@@ -8,10 +8,17 @@
 import SwiftUI
 
 protocol CreateEventViewModelProtocol: ObservableObject {
+    var eventName: String {get set}
+    var description: String {get set}
+    var participants: String {get set}
     func close()
 }
 
 final class CreateEventViewModel: CreateEventViewModelProtocol {
+    @Published var eventName: String = ""
+    @Published var description: String = ""
+    @Published var participants: String = ""
+    
     let repository: CreateEventRepositoryProtocol
     let navigation: CreateEventNavigationProtocol
 
