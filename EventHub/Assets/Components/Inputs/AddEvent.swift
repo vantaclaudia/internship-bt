@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct AddEvent: View {
+    var action: () -> Void
+    
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
+    
     var body: some View {
         VStack(alignment: .leading){
             HStack{
                 Text("Nu ai găsit ceva pe" + "\n" + "placul tău?").fontWeight(.bold).foregroundColor(.white).font(.system(size: 16)).padding(.top, -20)
                 Button(action: {
-                    //direct to add event page
+                    action()
                 }) {
                     Image("addEvent").foregroundColor(.black).padding(.top, 10)
                 }
@@ -34,6 +40,6 @@ struct AddEvent: View {
 
 struct AddEvent_Previews: PreviewProvider {
     static var previews: some View {
-        AddEvent()
+        AddEvent() { }
     }
 }

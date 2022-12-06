@@ -30,7 +30,7 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
                 GenericInput(placeholder: "Confirmă parola", icon: "key", errorMessage: viewModel.confirmPrompt, isSecure: true, text: $viewModel.confirmPassword)
                 .padding(.top, 5)
                 CustomPurpleButton(buttonText: "CREEAZĂ CONT"){
-                    signUp()
+                    self.viewModel.createUser()
                 }
                 .opacity(viewModel.isSignUpComplete ? 1 : 0.6)
                 .disabled(!viewModel.isSignUpComplete)
@@ -52,18 +52,18 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
         }
     }
     
-    func signUp() {
-        Auth.auth().createUser(withEmail: viewModel.mail, password: viewModel.password) { result, error in
-            if error != nil {
-                let alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: .alert)
-                let ok = UIAlertAction(title: "OK", style: .default) { (_) in }
-                alert.addAction(ok)
-                UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
-            }  else {
-                viewModel.goToHome()
-            }
-        }
-    }
+//    func signUp() {
+//        Auth.auth().createUser(withEmail: viewModel.mail, password: viewModel.password) { result, error in
+//            if error != nil {
+//                let alert = UIAlertController(title: "Error!", message: error!.localizedDescription, preferredStyle: .alert)
+//                let ok = UIAlertAction(title: "OK", style: .default) { (_) in }
+//                alert.addAction(ok)
+//                UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
+//            }  else {
+//                viewModel.goToHome()
+//            }
+//        }
+//    }
 }
 
 struct SignUpView_Previews: PreviewProvider {

@@ -9,6 +9,7 @@ import SwiftUI
 
 protocol HomeViewModelProtocol: ObservableObject {
     var searchText: String {get set}
+    func createEvent()
     func close()
 }
 
@@ -25,5 +26,9 @@ final class HomeViewModel: HomeViewModelProtocol {
 
     func close() {
         navigation.onClose?()
+    }
+    
+    func createEvent() {
+        navigation.onGoToCreateEvent?()
     }
 }

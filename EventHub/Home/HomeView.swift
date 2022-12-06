@@ -100,7 +100,9 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                     
                 // ADAUGA EVENIMENT
                 HStack{
-                    AddEvent()
+                    AddEvent() {
+                        viewModel.createEvent()
+                    }
                         .padding(.top, 10)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -114,7 +116,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
             }
         }
         .background(Color("dashboardBackground"))
-        . navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
         .padding(.top, -30)
     }
 }
