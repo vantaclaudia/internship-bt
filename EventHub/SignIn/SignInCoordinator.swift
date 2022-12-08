@@ -38,6 +38,7 @@ final class SignInCoordinator {
         let view = SignInView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)
 
+        navController.navigationBar.isHidden = true
         navController.pushViewController(viewController, animated: true)
     }
     

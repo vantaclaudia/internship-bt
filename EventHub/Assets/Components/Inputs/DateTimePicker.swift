@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct DateTimePicker: View {
-    @State private var datePicker = Date()
+    @State private var date = Date()
     var placeholder: String
+    
     private let dateRange: ClosedRange<Date> = {
         let calendar = Calendar.current
         let minDate = calendar.date(byAdding: .year, value: 0, to: .now)
@@ -28,7 +29,7 @@ struct DateTimePicker: View {
         HStack {
             Text(placeholder)
                 .foregroundColor(Color.gray).font(.system(size: 15))
-            DatePicker(selection: $datePicker, in: dateRange, displayedComponents: .date) {
+            DatePicker(selection: $date, in: dateRange, displayedComponents: .date) {
                 Text("date")
             }.frame(maxWidth: .infinity, alignment: .trailing).padding(.trailing, 10)
         }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TimePicker: View {
-    @State private var datePicker = Date()
+    @State private var date = Date()
     var placeholder: String
 
     var dateFormatter: DateFormatter {
@@ -21,7 +21,7 @@ struct TimePicker: View {
         HStack {
             Text(placeholder)
                 .foregroundColor(Color.gray).font(.system(size: 15))
-            DatePicker(selection: $datePicker, displayedComponents: .hourAndMinute) {
+            DatePicker(selection: $date, displayedComponents: .hourAndMinute) {
                 Text("date")
             }.frame(maxWidth: .infinity, alignment: .trailing).padding(.trailing, 10)
         }

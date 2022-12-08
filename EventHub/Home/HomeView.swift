@@ -45,6 +45,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                     }
                     .padding(.bottom, -10)
                 }
+                .padding(.top, 30)
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(

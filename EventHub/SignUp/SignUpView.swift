@@ -51,19 +51,6 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
             }
         }
     }
-    
-//    func signUp() {
-//        Auth.auth().createUser(withEmail: viewModel.mail, password: viewModel.password) { result, error in
-//            if error != nil {
-//                let alert = UIAlertController(title: "Error!", message: error!.localizedDescription, preferredStyle: .alert)
-//                let ok = UIAlertAction(title: "OK", style: .default) { (_) in }
-//                alert.addAction(ok)
-//                UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
-//            }  else {
-//                viewModel.goToHome()
-//            }
-//        }
-//    }
 }
 
 struct SignUpView_Previews: PreviewProvider {

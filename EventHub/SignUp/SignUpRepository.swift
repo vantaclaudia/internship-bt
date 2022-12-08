@@ -9,15 +9,10 @@ import Foundation
 import Firebase
 
 protocol SignUpRepositoryProtocol {
-    func getUser() -> String
     func createUser(username: String, mail: String, password: String, onResponse: @escaping(Result<Void, Error>) -> Void) -> Void
 }
 
 final class SignUpRepository: SignUpRepositoryProtocol {
-    func getUser() -> String {
-        "Vanta"
-    }
-    
     func signUp(id: String, username: String, mail: String, password: String, onResponse: @escaping(Result<Void, Error>) -> Void) -> Void {
         let db = Firestore.firestore()
         db.collection("users").document(id).setData(["username": username, "mail": mail, "password": password]) { error in

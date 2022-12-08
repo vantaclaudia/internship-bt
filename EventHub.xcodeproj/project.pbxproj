@@ -30,6 +30,8 @@
 		195291FC2939119A0036B3D9 /* PureTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291FB2939119A0036B3D9 /* PureTextInput.swift */; };
 		195291FE293DDC030036B3D9 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291FD293DDC030036B3D9 /* TimePicker.swift */; };
 		19529200293E12C70036B3D9 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195291FF293E12C70036B3D9 /* PhotoPicker.swift */; };
+		1952920B294083F20036B3D9 /* Participants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1952920A294083F20036B3D9 /* Participants.swift */; };
+		1952920D29408FAA0036B3D9 /* EventHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1952920C29408FAA0036B3D9 /* EventHead.swift */; };
 		195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A05292D099B002CF2DD /* AppDelegate.swift */; };
 		195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A07292D099B002CF2DD /* SceneDelegate.swift */; };
 		195F1A0A292D099B002CF2DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F1A09292D099B002CF2DD /* ViewController.swift */; };
@@ -75,6 +77,8 @@
 		195291FB2939119A0036B3D9 /* PureTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureTextInput.swift; sourceTree = "<group>"; };
 		195291FD293DDC030036B3D9 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		195291FF293E12C70036B3D9 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		1952920A294083F20036B3D9 /* Participants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participants.swift; sourceTree = "<group>"; };
+		1952920C29408FAA0036B3D9 /* EventHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHead.swift; sourceTree = "<group>"; };
 		195F1A02292D099B002CF2DD /* EventHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		195F1A05292D099B002CF2DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		195F1A07292D099B002CF2DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				195291FB2939119A0036B3D9 /* PureTextInput.swift */,
 				195291FD293DDC030036B3D9 /* TimePicker.swift */,
 				195291FF293E12C70036B3D9 /* PhotoPicker.swift */,
+				1952920A294083F20036B3D9 /* Participants.swift */,
+				1952920C29408FAA0036B3D9 /* EventHead.swift */,
 			);
 			path = Inputs;
 			sourceTree = "<group>";
@@ -336,11 +342,13 @@
 				198D76F82934ECE10027100B /* SearchSettingsComponent.swift in Sources */,
 				195F1A22292D0B18002CF2DD /* SignInView.swift in Sources */,
 				195F1A44292E5427002CF2DD /* SignUpNavigation.swift in Sources */,
+				1952920D29408FAA0036B3D9 /* EventHead.swift in Sources */,
 				195291EA2937B7940036B3D9 /* CreateEventRepository.swift in Sources */,
 				195291D9293500B50036B3D9 /* HomeRepository.swift in Sources */,
 				195F1A28292D0B69002CF2DD /* SignInViewModel.swift in Sources */,
 				195291F22938B0A10036B3D9 /* PopularEvents.swift in Sources */,
 				195F1A2E292D0F3F002CF2DD /* CustomPurpleButton.swift in Sources */,
+				1952920B294083F20036B3D9 /* Participants.swift in Sources */,
 				195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */,
 				195F1A1E292D0A31002CF2DD /* AppCoordinator.swift in Sources */,
 				195F1A10292D099B002CF2DD /* EventHub.xcdatamodeld in Sources */,

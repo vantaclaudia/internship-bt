@@ -10,6 +10,7 @@ import SwiftUI
 
 final class CreateEventCoordinator {
     let navController: UINavigationController
+    var homeCoordinator: HomeCoordinator?
 
     init(navController: UINavigationController) {
         self.navController = navController
@@ -23,11 +24,21 @@ final class CreateEventCoordinator {
             self?.navController.popViewController(animated: true)
             print("Should Close SignUpScreen")
         }
+        
+        navigation.onGoToHome = { [weak self] in
+            self?.onGoToHome()
+        }
 
         let viewModel = CreateEventViewModel(repository: repository, navigation: navigation)
         let view = CreateEventView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)
-
+        
+        navController.navigationBar.isHidden = true
         navController.pushViewController(viewController, animated: true)
+    }
+    
+    func onGoToHome() {
+        homeCoordinator = HomeCoordinator(navController: navController)
+        homeCoordinator?.start()
     }
 }

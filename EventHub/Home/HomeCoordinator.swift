@@ -33,6 +33,7 @@ final class HomeCoordinator {
         let view = HomeView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)
 
+        navController.navigationBar.isHidden = true
         navController.pushViewController(viewController, animated: true)
     }
     
