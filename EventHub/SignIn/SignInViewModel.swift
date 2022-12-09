@@ -12,8 +12,10 @@ protocol SignInViewModelProtocol: ObservableObject {
     var password: String {get set}
     var emailPrompt: String {get}
     var passwordPrompt: String {get}
+    var isSignUpComplete: Bool {get}
     func close()
-//    func goToSignUp()
+    func goToSignUp()
+    func goToHome()
 }
 
 final class SignInViewModel: SignInViewModelProtocol {
@@ -32,6 +34,14 @@ final class SignInViewModel: SignInViewModelProtocol {
         navigation.onClose?()
     }
     
+    func goToSignUp() {
+        navigation.onGoToSignUp?()
+    }
+    
+    func goToHome() {
+        navigation.onGoToHome?()
+    }
+
     // MARK: - Validation Functions
     
     func isPasswordValid() -> Bool {
@@ -42,6 +52,10 @@ final class SignInViewModel: SignInViewModelProtocol {
     func isEmailValid() -> Bool {
         let emailTest = NSPredicate(format: "SELF MATCHES %@", "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$")
         return emailTest.evaluate(with: mail)
+    }
+    
+    var isSignUpComplete: Bool {
+        if !isPasswordValid() || !isEmailValid() {return false} else {return true}
     }
     
     // MARK: - Validation messages
