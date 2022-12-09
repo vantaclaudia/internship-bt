@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190C47E429421AEE00D78475 /* EventDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47E329421AEE00D78475 /* EventDetailsCoordinator.swift */; };
+		190C47E629421AFD00D78475 /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47E529421AFD00D78475 /* EventDetailsView.swift */; };
+		190C47E829421B0C00D78475 /* EventDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47E729421B0C00D78475 /* EventDetailsRepository.swift */; };
+		190C47EA29421B1B00D78475 /* EventDetailsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47E929421B1B00D78475 /* EventDetailsNavigation.swift */; };
+		190C47EC29421B3700D78475 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47EB29421B3700D78475 /* EventDetailsViewModel.swift */; };
+		190C47EF2942241800D78475 /* ParticipatePurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47EE2942241800D78475 /* ParticipatePurpleButton.swift */; };
+		190C47F1294300C800D78475 /* ParticipateChooseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47F0294300C800D78475 /* ParticipateChooseButton.swift */; };
+		190C47F3294302C500D78475 /* DetailsOfEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47F2294302C500D78475 /* DetailsOfEvent.swift */; };
+		190C47F62943037700D78475 /* DetailButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47F52943037700D78475 /* DetailButtons.swift */; };
+		190C47F82943287500D78475 /* OrganiserDetailsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47F72943287500D78475 /* OrganiserDetailsEvent.swift */; };
+		190C47FA2943322100D78475 /* MoreSimilarEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47F92943322100D78475 /* MoreSimilarEvents.swift */; };
+		190C47FD294339D300D78475 /* HeadEventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190C47FC294339D300D78475 /* HeadEventDetails.swift */; };
 		193BCB612930BC4F00B97B14 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 193BCB602930BC4F00B97B14 /* FirebaseAuth */; };
 		193BCB632930BC4F00B97B14 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 193BCB622930BC4F00B97B14 /* FirebaseFirestore */; };
 		193BCB692930C70E00B97B14 /* GenericInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BCB682930C70E00B97B14 /* GenericInput.swift */; };
@@ -56,6 +68,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		190C47E329421AEE00D78475 /* EventDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsCoordinator.swift; sourceTree = "<group>"; };
+		190C47E529421AFD00D78475 /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
+		190C47E729421B0C00D78475 /* EventDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsRepository.swift; sourceTree = "<group>"; };
+		190C47E929421B1B00D78475 /* EventDetailsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsNavigation.swift; sourceTree = "<group>"; };
+		190C47EB29421B3700D78475 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		190C47EE2942241800D78475 /* ParticipatePurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipatePurpleButton.swift; sourceTree = "<group>"; };
+		190C47F0294300C800D78475 /* ParticipateChooseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipateChooseButton.swift; sourceTree = "<group>"; };
+		190C47F2294302C500D78475 /* DetailsOfEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOfEvent.swift; sourceTree = "<group>"; };
+		190C47F52943037700D78475 /* DetailButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailButtons.swift; sourceTree = "<group>"; };
+		190C47F72943287500D78475 /* OrganiserDetailsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganiserDetailsEvent.swift; sourceTree = "<group>"; };
+		190C47F92943322100D78475 /* MoreSimilarEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSimilarEvents.swift; sourceTree = "<group>"; };
+		190C47FC294339D300D78475 /* HeadEventDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadEventDetails.swift; sourceTree = "<group>"; };
 		193BCB682930C70E00B97B14 /* GenericInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInput.swift; sourceTree = "<group>"; };
 		195291D42935009C0036B3D9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		195291D6293500A90036B3D9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -117,6 +141,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190C47E229421A3F00D78475 /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				190C47ED294223FC00D78475 /* Assets */,
+				190C47E329421AEE00D78475 /* EventDetailsCoordinator.swift */,
+				190C47E529421AFD00D78475 /* EventDetailsView.swift */,
+				190C47E729421B0C00D78475 /* EventDetailsRepository.swift */,
+				190C47E929421B1B00D78475 /* EventDetailsNavigation.swift */,
+				190C47EB29421B3700D78475 /* EventDetailsViewModel.swift */,
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
+		190C47ED294223FC00D78475 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				190C47F42943033700D78475 /* Buttons */,
+				190C47F2294302C500D78475 /* DetailsOfEvent.swift */,
+				190C47F92943322100D78475 /* MoreSimilarEvents.swift */,
+				190C47F72943287500D78475 /* OrganiserDetailsEvent.swift */,
+				190C47FC294339D300D78475 /* HeadEventDetails.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		190C47F42943033700D78475 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				190C47F0294300C800D78475 /* ParticipateChooseButton.swift */,
+				190C47EE2942241800D78475 /* ParticipatePurpleButton.swift */,
+				190C47F52943037700D78475 /* DetailButtons.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		195291E42937B67E0036B3D9 /* CreateEvent */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,14 +207,15 @@
 		195F1A04292D099B002CF2DD /* EventHub */ = {
 			isa = PBXGroup;
 			children = (
-				195F1A29292D0E43002CF2DD /* Assets */,
 				195F1A05292D099B002CF2DD /* AppDelegate.swift */,
 				195F1A07292D099B002CF2DD /* SceneDelegate.swift */,
 				195F1A1D292D0A31002CF2DD /* AppCoordinator.swift */,
+				195F1A29292D0E43002CF2DD /* Assets */,
 				195F1A3C292E5339002CF2DD /* SignUp */,
 				195F1A1C292D0A02002CF2DD /* SignIn */,
 				198D76F92934FD1C0027100B /* Home */,
 				195291E42937B67E0036B3D9 /* CreateEvent */,
+				190C47E229421A3F00D78475 /* EventDetails */,
 				195F1A0B292D099B002CF2DD /* Main.storyboard */,
 				195F1A09292D099B002CF2DD /* ViewController.swift */,
 				195F1A11292D099C002CF2DD /* Assets.xcassets */,
@@ -242,9 +302,9 @@
 			children = (
 				195291D42935009C0036B3D9 /* HomeCoordinator.swift */,
 				195291D6293500A90036B3D9 /* HomeView.swift */,
+				195291DC293500CD0036B3D9 /* HomeViewModel.swift */,
 				195291D8293500B50036B3D9 /* HomeRepository.swift */,
 				195291DA293500C00036B3D9 /* HomeNavigation.swift */,
-				195291DC293500CD0036B3D9 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -328,16 +388,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190C47E829421B0C00D78475 /* EventDetailsRepository.swift in Sources */,
 				195F1A0A292D099B002CF2DD /* ViewController.swift in Sources */,
+				190C47E429421AEE00D78475 /* EventDetailsCoordinator.swift in Sources */,
 				195291E62937B77B0036B3D9 /* CreateEventCoordinator.swift in Sources */,
 				195F1A42292E53FF002CF2DD /* SignUpRepository.swift in Sources */,
 				195291F62938C29C0036B3D9 /* AddEvent.swift in Sources */,
 				193BCB692930C70E00B97B14 /* GenericInput.swift in Sources */,
 				195291EE2937B7B70036B3D9 /* CreateEventViewModel.swift in Sources */,
+				190C47F82943287500D78475 /* OrganiserDetailsEvent.swift in Sources */,
 				195F1A46292E544A002CF2DD /* SignUpViewModel.swift in Sources */,
 				195F1A24292D0B31002CF2DD /* SignInRepository.swift in Sources */,
 				195291F82938D5490036B3D9 /* BottomBar.swift in Sources */,
 				195F1A26292D0B49002CF2DD /* SignInNavigation.swift in Sources */,
+				190C47EF2942241800D78475 /* ParticipatePurpleButton.swift in Sources */,
 				195291FE293DDC030036B3D9 /* TimePicker.swift in Sources */,
 				198D76F82934ECE10027100B /* SearchSettingsComponent.swift in Sources */,
 				195F1A22292D0B18002CF2DD /* SignInView.swift in Sources */,
@@ -347,23 +411,31 @@
 				195291D9293500B50036B3D9 /* HomeRepository.swift in Sources */,
 				195F1A28292D0B69002CF2DD /* SignInViewModel.swift in Sources */,
 				195291F22938B0A10036B3D9 /* PopularEvents.swift in Sources */,
+				190C47F62943037700D78475 /* DetailButtons.swift in Sources */,
+				190C47F1294300C800D78475 /* ParticipateChooseButton.swift in Sources */,
 				195F1A2E292D0F3F002CF2DD /* CustomPurpleButton.swift in Sources */,
 				1952920B294083F20036B3D9 /* Participants.swift in Sources */,
 				195F1A06292D099B002CF2DD /* AppDelegate.swift in Sources */,
 				195F1A1E292D0A31002CF2DD /* AppCoordinator.swift in Sources */,
 				195F1A10292D099B002CF2DD /* EventHub.xcdatamodeld in Sources */,
+				190C47F3294302C500D78475 /* DetailsOfEvent.swift in Sources */,
+				190C47FD294339D300D78475 /* HeadEventDetails.swift in Sources */,
 				195291D7293500A90036B3D9 /* HomeView.swift in Sources */,
 				195291DB293500C00036B3D9 /* HomeNavigation.swift in Sources */,
 				195F1A20292D0ADF002CF2DD /* SignInCoordinator.swift in Sources */,
+				190C47EC29421B3700D78475 /* EventDetailsViewModel.swift in Sources */,
 				195291E82937B7870036B3D9 /* CreateEventView.swift in Sources */,
 				195291DD293500CD0036B3D9 /* HomeViewModel.swift in Sources */,
+				190C47EA29421B1B00D78475 /* EventDetailsNavigation.swift in Sources */,
 				195291FA2938E6BC0036B3D9 /* DateTimePicker.swift in Sources */,
 				195291F42938B87A0036B3D9 /* RecomandedEvents.swift in Sources */,
 				195291E329378AE90036B3D9 /* ColoredButton.swift in Sources */,
 				195291F02937D5560036B3D9 /* TopTenEvents.swift in Sources */,
+				190C47E629421AFD00D78475 /* EventDetailsView.swift in Sources */,
 				195F1A40292E53C4002CF2DD /* SignUpView.swift in Sources */,
 				19529200293E12C70036B3D9 /* PhotoPicker.swift in Sources */,
 				195291EC2937B7A60036B3D9 /* CreateEventNavigation.swift in Sources */,
+				190C47FA2943322100D78475 /* MoreSimilarEvents.swift in Sources */,
 				195291D52935009C0036B3D9 /* HomeCoordinator.swift in Sources */,
 				195F1A3E292E5386002CF2DD /* SignUpCoordinator.swift in Sources */,
 				195F1A08292D099B002CF2DD /* SceneDelegate.swift in Sources */,
