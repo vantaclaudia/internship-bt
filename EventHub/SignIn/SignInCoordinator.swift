@@ -10,6 +10,8 @@ import SwiftUI
 
 final class SignInCoordinator {
     let navController: UINavigationController
+    var signUpCoordinator: SignUpCoordinator?
+    var homeCoordinator: HomeCoordinator?
 
     init(navController: UINavigationController) {
         self.navController = navController
@@ -23,11 +25,30 @@ final class SignInCoordinator {
             self?.navController.popViewController(animated: true)
             print("Should Close SignInScreen")
         }
+        
+        navigation.onGoToSignUp = { [weak self] in
+            self?.onGoToSignUp()
+        }
+        
+        navigation.onGoToHome = { [weak self] in
+            self?.onGoToHome()
+        }
 
         let viewModel = SignInViewModel(repository: repository, navigation: navigation)
         let view = SignInView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)
 
+        navController.navigationBar.isHidden = true
         navController.pushViewController(viewController, animated: true)
+    }
+    
+    func onGoToSignUp() {
+        signUpCoordinator = SignUpCoordinator(navController: navController)
+        signUpCoordinator?.start()
+    }
+    
+    func onGoToHome() {
+        homeCoordinator = HomeCoordinator(navController: navController)
+        homeCoordinator?.start()
     }
 }

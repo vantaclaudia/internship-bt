@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignInView<ViewModel: SignInViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
@@ -15,10 +16,10 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
         VStack {
             VStack {
                 Image("splashScreen-logo")
-                    .frame(width: 294.0, height: 88.0)
+                    .resizable()
+                    .frame(width: 240, height: 72)
                     .scaledToFit()
-                    .padding(.top, 30)
-                    .padding(.bottom, 40)
+                    .padding(.bottom, 30)
             }
             VStack {
                 Text("Autentifică-te").bold()
@@ -31,8 +32,12 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
                 .padding(.top, 5)
                 GenericInput(placeholder: "Parola", icon: "key", errorMessage: viewModel.passwordPrompt, isSecure: true, text: $viewModel.password)
                 .padding(.top, 5)
-                CustomPurpleButton(buttonText: "INTRĂ ÎN CONT")
-                    .padding(.top, 10)
+                CustomPurpleButton(buttonText: "INTRĂ ÎN CONT") {
+                    signIn()
+                }
+                .opacity(viewModel.isSignUpComplete ? 1 : 0.6)
+                .disabled(!viewModel.isSignUpComplete)
+                .padding(.top, 10)
                 Text("SAU")
                     .padding(.top, 15).foregroundColor(Color("borderGrey")).bold()
         }
@@ -40,12 +45,25 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
                 HStack {
                     Text("Nu ai cont?")
                     Button(action: {
-                        //action
+                        viewModel.goToSignUp()
                     }) {
-                        Text("Înregistreaza-te").bold()
+                        Text("Înregistrează-te").bold()
                     }
                         .foregroundColor(Color("purple"))
                 }
+            }
+        }
+    }
+    
+    func signIn() {
+        Auth.auth().signIn(withEmail: viewModel.mail, password: viewModel.password) { result, error in
+            if error != nil {
+                let alert = UIAlertController(title: "Error", message: error!.localizedDescription, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default) { (_) in }
+                alert.addAction(ok)
+                UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
+            } else {
+                viewModel.goToHome()
             }
         }
     }

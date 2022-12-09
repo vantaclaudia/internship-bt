@@ -31,9 +31,9 @@ struct GenericInput: View {
                     .offset(y: !isFocused && self.text.isEmpty ? -1 : -20)
                     .font(.system(size: 15))
                 if isSecure {
-                    SecureField("", text: $text).focused($isFocused, equals: true)
+                    SecureField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none).disableAutocorrection(true)
                 } else {
-                    TextField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none)
+                    TextField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none).disableAutocorrection(true)
                 }
             }
             Image(icon)
@@ -43,7 +43,7 @@ struct GenericInput: View {
         }
         .padding(.leading)
         .frame(width: 366, height: 64)
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 3).foregroundColor(getBorderColor()))
+        .overlay(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 2).foregroundColor(getBorderColor()))
         .background(RoundedRectangle(cornerRadius: 16).stroke(lineWidth: 0).background(getErrorBackgroundColor()))
         .cornerRadius(16)
         HStack{

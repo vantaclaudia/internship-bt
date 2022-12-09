@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
@@ -13,13 +14,6 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
     var body: some View {
         NavigationView {
         VStack {
-            VStack {
-                Image("splashScreen-logo")
-                    .frame(width: 294.0, height: 88.0)
-                    .scaledToFit()
-                    .padding(.top, 30)
-                    .padding(.bottom, 40)
-            }
             VStack {
                 Text("Înregistrează-te").bold()
                     .font(.system(size: 24))
@@ -35,8 +29,11 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
                 .padding(.top, 5)
                 GenericInput(placeholder: "Confirmă parola", icon: "key", errorMessage: viewModel.confirmPrompt, isSecure: true, text: $viewModel.confirmPassword)
                 .padding(.top, 5)
-                CustomPurpleButton(buttonText: "CREEAZĂ CONT")
-//                { }
+                CustomPurpleButton(buttonText: "CREEAZĂ CONT"){
+                    self.viewModel.createUser()
+                }
+                .opacity(viewModel.isSignUpComplete ? 1 : 0.6)
+                .disabled(!viewModel.isSignUpComplete)
                 .padding(.top, 10)
             Text("SAU")
                 .padding(.top, 15).foregroundColor(Color("borderGrey")).bold()
@@ -45,12 +42,12 @@ struct SignUpView<ViewModel: SignUpViewModelProtocol>: View {
             HStack {
                 Text("Ai deja un cont?")
                 Button(action: {
-                    //action
+                    self.viewModel.goToSignIn()
                 }) {
                     Text("Autentifică-te").bold()
                 }
                     .foregroundColor(Color("purple"))
-            }
+                }
             }
         }
     }
