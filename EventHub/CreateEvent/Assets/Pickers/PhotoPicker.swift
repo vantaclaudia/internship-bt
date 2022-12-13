@@ -11,6 +11,11 @@ import PhotosUI
 struct PhotoPicker: View {
     @State var selectedItem: [PhotosPickerItem] = []
     @State var data: Data?
+//    @Binding var image: UIImage
+    
+//    init(image: UIImage) {
+//        self.image = image
+//    }
     
     var body: some View {
         VStack {

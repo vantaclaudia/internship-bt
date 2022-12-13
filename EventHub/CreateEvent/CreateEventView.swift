@@ -23,7 +23,7 @@ struct CreateEventView<ViewModel: CreateEventViewModelProtocol>: View {
                     GenericInput(placeholder: "Locație eveniment", icon: "pin", errorMessage: "", isSecure: false, text: $viewModel.placeName).disabled(true).padding(.top, 10)
                     Participants(placeholder: "Număr de participanți", icon: "user", text: $viewModel.participants).padding(.top, -21)
                     PureTextInput(placeholder: "Descriere eveniment", icon: "file", errorMessage: "", isSecure: false, text: $viewModel.description).padding(.top, -3)
-                    CustomPurpleButton(buttonText: "CREEAZĂ EVENIMENT") {self.viewModel.addEventToDB()}.padding(.top, -35)
+                    CustomPurpleButton(buttonText: "CREEAZĂ EVENIMENT") {viewModel.addEventToDB()}.padding(.top, -35)
                 }
             }
             .navigationBarBackButtonHidden(true)

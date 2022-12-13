@@ -10,7 +10,7 @@ import SwiftUI
 extension Formatter {
     static let bigCardDateFormat: DateFormatter = {
     let formatter = DateFormatter()
-        formatter.dateFormat = "d MMM" + " • " + "HH:mm" + " • " + "Arena Națională"
+        formatter.dateFormat = "d MMM" + " • " + "HH:mm" + " • "
         formatter.locale = Locale(identifier: "ro_RO")
         return formatter
     }()
@@ -26,26 +26,29 @@ struct PopularEventsStyle: View {
     var body: some View {
         VStack {
             ZStack{
-                Image(bigCard.imageUrl)
+                Image(event.image)
                     .resizable()
                     .frame(width: 304, height: 160)
                     .cornerRadius(10)
                     .padding(.top, 8).padding(.bottom, 0)
                     .padding(.trailing, 8).padding(.leading, 8)
             }
-            Text(bigCard.title)
+            Text(event.eventName)
                 .font(.system(size: 16))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
                 .fontWeight(.semibold)
-                .padding(.bottom, 9).padding(.leading, -70)
+                .frame(width: 297)
             HStack{
-                Text("26 OCT").foregroundColor(Color("purple"))
-                Image("ellipse")
-                Text("17:00").foregroundColor(Color("purple"))
-                Image("ellipse")
-                Text("Arena Națională").foregroundColor(Color("purple"))
+                Text(Formatter.bigCardDateFormat.string(from: event.date))
+                    .foregroundColor(Color("purple"))
+                    .textCase(.uppercase)
+                Text(event.placeName)
+                    .foregroundColor(Color("purple"))
+                    .padding(.leading,-10)
             }
                 .font(.system(size: 13))
-                .padding(.trailing, 75).padding(.top, -10).padding(.bottom, 5)
+                .padding(.leading, -95).padding(.top, -10).padding(.bottom, 5)
             HStack{
                 Image("participants")
                 Text("2.5k participanți").foregroundColor(Color("borderGrey"))
@@ -56,8 +59,8 @@ struct PopularEventsStyle: View {
     }
 }
 
-struct PopularEvents_Previews: PreviewProvider {
+struct PopularEventsStyle_Previews: PreviewProvider {
     static var previews: some View {
-        PopularEvents(event: event)
+        PopularEventsStyle(event: Event(image: "men", currentUsers: "1", eventName: "Depeche Mode în București -  Memento Mori Tour", date: Date(), placeName: "Oradea, Romania", participants: "250", description: "Descriere"))
     }
 }

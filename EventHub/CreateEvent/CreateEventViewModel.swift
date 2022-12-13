@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import FirebaseStorage
 
 protocol CreateEventViewModelProtocol: ObservableObject {
     var eventName: String {get set}
@@ -14,6 +15,8 @@ protocol CreateEventViewModelProtocol: ObservableObject {
     var description: String {get set}
     var participants: String {get set}
     var date: Date {get set}
+    var image: UIImage {get set}
+    var events: [Event] {get set}
     func goToHome()
     func close()
     func addEventToDB()
@@ -25,14 +28,15 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
     @Published var placeName: String = "Oradea, România"
     @Published var participants = ""
     @Published var date: Date = Date()
+    @Published var image: UIImage = UIImage()
+    @Published var events = [Event]()
     
     let repository: CreateEventRepositoryProtocol
     let navigation: CreateEventNavigationProtocol
-
+    
     init(repository: CreateEventRepositoryProtocol, navigation: CreateEventNavigationProtocol) {
         self.repository = repository
         self.navigation = navigation
-
     }
 
     func close() {
@@ -44,11 +48,14 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
     }
     
     func addEventToDB() {
-        repository.addEventToDB(eventName: eventName, date: date, placeName: placeName, participants: participants, description: description) {result in
+        let currentUsers = Auth.auth().currentUser!.uid
+        repository.addEventToDB(image: image, currentUsers: currentUsers, eventName: eventName, date: date, placeName: placeName, participants: participants, description: description) {result in
             switch result {
             case .success:
+                print("success")
                 self.goToHome()
             case .failure(let error):
+                print(error)
                 let alert = UIAlertController(title: "Error!", message: error.localizedDescription, preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default) { (_) in }
                 alert.addAction(ok)

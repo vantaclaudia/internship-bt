@@ -1,14 +1,14 @@
 //
-//  EventDetailsCoordinator.swift
+//  ProfileCoordinator.swift
 //  EventHub
 //
-//  Created by Claudia Vanta on 08.12.2022.
+//  Created by Claudia Vanta on 09.12.2022.
 //
 
-import Foundation
+import UIKit
 import SwiftUI
 
-final class EventDetailsCoordinator {
+final class ProfileCoordinator {
     let navController: UINavigationController
 
     init(navController: UINavigationController) {
@@ -16,11 +16,11 @@ final class EventDetailsCoordinator {
     }
 
     func start() {
-        let repository = EventDetailsRepository()
-        var navigation = EventDetailsNavigation()
+        let repository = ProfileRepository()
+        let navigation = ProfileNavigation()
 
-        let viewModel = EventDetailsViewModel(repository: repository, navigation: navigation)
-        let view = EventDetailsView(viewModel: viewModel)
+        let viewModel = ProfileViewModel(repository: repository, navigation: navigation)
+        let view = ProfileView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)
         
         navController.navigationBar.isHidden = true
