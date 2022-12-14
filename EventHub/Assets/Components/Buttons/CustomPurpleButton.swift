@@ -22,12 +22,12 @@ struct CustomPurpleButton: View {
             Button(action: {
                 action()
             }) {
-            Text(buttonText).bold()
-                .padding()
-                .textCase(.uppercase)
-                .foregroundColor(.white)
+                Text(buttonText).bold()
+                    .padding()
+                    .textCase(.uppercase)
+                    .foregroundColor(.white)
             }
-                .background(RoundedRectangle(cornerRadius: 16)
+            .background(RoundedRectangle(cornerRadius: 16)
                 .frame(width: 366, height: 64)
                 .foregroundColor(Color("purple"))
                 .textCase(.uppercase)

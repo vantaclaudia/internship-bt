@@ -10,38 +10,40 @@ import Firebase
 
 struct SignInView<ViewModel: SignInViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
-
+    
     var body: some View {
         NavigationView {
-        VStack {
             VStack {
-                Image("splashScreen-logo")
-                    .resizable()
-                    .frame(width: 240, height: 72)
-                    .scaledToFit()
-                    .padding(.bottom, 30)
-            }
-            VStack {
-                Text("Autentifică-te").bold()
-                    .font(.system(size: 24))
-                    .lineSpacing(29)
-                    .frame(width: 360, height: 29, alignment: .topLeading)
-            }
-            VStack {
-                GenericInput(placeholder: "Adresa de e-mail", icon: "envelope", errorMessage: viewModel.emailPrompt, isSecure: false, text: $viewModel.mail)
-                .padding(.top, 5)
-                GenericInput(placeholder: "Parola", icon: "key", errorMessage: viewModel.passwordPrompt, isSecure: true, text: $viewModel.password)
-                .padding(.top, 5)
-                CustomPurpleButton(buttonText: "INTRĂ ÎN CONT") {
-                    signIn()
+                VStack {
+                    Image("splashScreen-logo")
+                        .resizable()
+                        .frame(width: 240, height: 72)
+                        .scaledToFit()
+                        .padding(.bottom, 30)
                 }
-                .opacity(viewModel.isSignUpComplete ? 1 : 0.6)
-                .disabled(!viewModel.isSignUpComplete)
-                .padding(.top, 10)
-                Text("SAU")
-                    .padding(.top, 15).foregroundColor(Color("borderGrey")).bold()
-        }
-            Spacer()
+                VStack {
+                    Text("Autentifică-te").bold()
+                        .font(.system(size: 24))
+                        .lineSpacing(29)
+                        .frame(width: 360, height: 29, alignment: .topLeading)
+                }
+                VStack {
+                    GenericInput(placeholder: "Adresa de e-mail", icon: "envelope", errorMessage: viewModel.emailPrompt, isSecure: false, text: $viewModel.mail)
+                        .padding(.top, 5)
+                    GenericInput(placeholder: "Parola", icon: "key", errorMessage: viewModel.passwordPrompt, isSecure: true, text: $viewModel.password)
+                        .padding(.top, 5)
+                    CustomPurpleButton(buttonText: "INTRĂ ÎN CONT") {
+                        signIn()
+                    }
+                    .opacity(viewModel.isSignUpComplete ? 1 : 0.6)
+                    .disabled(!viewModel.isSignUpComplete)
+                    .padding(.top, 10)
+                    Text("SAU")
+                        .padding(.top, 15)
+                        .foregroundColor(Color("borderGrey"))
+                        .bold()
+                }
+                Spacer()
                 HStack {
                     Text("Nu ai cont?")
                     Button(action: {
@@ -49,7 +51,7 @@ struct SignInView<ViewModel: SignInViewModelProtocol>: View {
                     }) {
                         Text("Înregistrează-te").bold()
                     }
-                        .foregroundColor(Color("purple"))
+                    .foregroundColor(Color("purple"))
                 }
             }
         }

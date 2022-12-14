@@ -19,7 +19,7 @@ struct TopTenEvents: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(events) { event in
-                        TopTenEventsStyle(event: event)
+                        TopTenEventsStyle(event: event, image: event.image)
                     }
                 }
             }

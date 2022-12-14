@@ -19,10 +19,10 @@ struct ParticipatePurpleButton: View {
             Button(action: {
                 action()
             }) {
-            Text("VREAU SĂ PARTICIP").fontWeight(.bold).foregroundColor(.white).font(.system(size: 16))
-                .frame(maxWidth: .infinity, alignment: .center).padding(.leading, 80)
-            Image("star")
-                .padding(.trailing, 50)
+                Text("VREAU SĂ PARTICIP").fontWeight(.bold).foregroundColor(.white).font(.system(size: 16))
+                    .frame(maxWidth: .infinity, alignment: .center).padding(.leading, 80)
+                Image("star")
+                    .padding(.trailing, 50)
             }
         }.background(Color("purple").cornerRadius(16).frame(width: 366, height: 64)).padding(.top, 20)
     }

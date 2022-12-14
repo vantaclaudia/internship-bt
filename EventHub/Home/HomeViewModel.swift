@@ -10,13 +10,16 @@ import SwiftUI
 protocol HomeViewModelProtocol: ObservableObject {
     var searchText: String {get set}
     var events: [Event] {get set}
+    var popularEvents: [Event] {get set}
+    var recomandedEvents: [Event] {get set}
     func createEvent()
-    func close()
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
     @Published var searchText: String = ""
     @Published var events = [Event]()
+    @Published var popularEvents = [Event]()
+    @Published var recomandedEvents = [Event]()
     
     let repository: HomeRepositoryProtocol
     let navigation: HomeNavigationProtocol
@@ -25,10 +28,8 @@ final class HomeViewModel: HomeViewModelProtocol {
         self.repository = repository
         self.navigation = navigation
         self.getEvents()
-    }
-
-    func close() {
-        navigation.onClose?()
+        self.getOrderPopularEvents()
+        self.getRecomandedEvents()
     }
     
     func createEvent() {
@@ -40,6 +41,22 @@ final class HomeViewModel: HomeViewModelProtocol {
             let result = await repository.fetchEvents()
             print(result)
             events = result
+        }
+    }
+    
+    func getOrderPopularEvents() {
+        Task {
+            let result = await repository.orderPopularEvents()
+            print(result)
+            popularEvents = result
+        }
+    }
+    
+    func getRecomandedEvents() {
+        Task {
+            let result = await repository.recomandedEvents()
+            print(result)
+            recomandedEvents = result
         }
     }
 }

@@ -26,10 +26,9 @@ struct PureTextInput: View {
     var body: some View {
         HStack{
             ZStack(alignment: .leading){
-//                if text.isEmpty {
-                    Text(placeholder)
-                        .foregroundColor(getErrorTextColor())
-                        .padding(.top, -60)
+                Text(placeholder)
+                    .foregroundColor(getErrorTextColor())
+                    .padding(.top, -60)
                     .font(.system(size: 15))
                 if isSecure {
                     SecureField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none).disableAutocorrection(true)

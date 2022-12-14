@@ -15,10 +15,10 @@ struct DetailButtons: View {
     
     init(
         buttonText: String, icon: String, action: @escaping () -> Void) {
-        self.buttonText = buttonText
-        self.icon = icon
-        self.action = action
-    }
+            self.buttonText = buttonText
+            self.icon = icon
+            self.action = action
+        }
     
     var body: some View {
         ZStack{
@@ -26,16 +26,14 @@ struct DetailButtons: View {
                 action()
             }) {
                 Image(icon)
-//                    .resizable()
                     .foregroundColor(Color("purple"))
-//                    .frame(width: 12, height: 12)
                     .padding(.leading, 10).padding(.top, -2)
                 Text(buttonText).fixedSize(horizontal: false, vertical: true)
-                .padding(.top, 16).padding(.bottom, 16).padding(.trailing, 8)
-                .frame(height: 40)
-                .fontWeight(.semibold)
-                .foregroundColor(Color("darkPurple"))
-                .font(.system(size: 13))
+                    .padding(.top, 16).padding(.bottom, 16).padding(.trailing, 8)
+                    .frame(height: 40)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("darkPurple"))
+                    .font(.system(size: 13))
             }
             .overlay(RoundedRectangle(cornerRadius: 100).stroke(lineWidth: 2).foregroundColor(Color("purple")))
             .background(RoundedRectangle(cornerRadius: 100).stroke(lineWidth: 0).background(Color.white))

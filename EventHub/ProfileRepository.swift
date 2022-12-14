@@ -8,10 +8,6 @@
 import Foundation
 import Firebase
 
-protocol ProfileRepositoryProtocol {
-    
-}
+protocol ProfileRepositoryProtocol { }
 
-final class ProfileRepository: ProfileRepositoryProtocol {
-    
-}
+final class ProfileRepository: ProfileRepositoryProtocol { }

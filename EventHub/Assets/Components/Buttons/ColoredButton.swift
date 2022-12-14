@@ -17,11 +17,11 @@ struct ColoredButton: View {
                 //action
             }) {
                 Text(buttonText)
-                .padding()
-                .fontWeight(.heavy)
-                .foregroundColor(.white)
-                .font(.system(size: 13))
-                .padding(.top, 8).padding(.bottom, 8).padding(.leading, 5).padding(.trailing, 5)
+                    .padding()
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                    .font(.system(size: 13))
+                    .padding(.top, 8).padding(.bottom, 8).padding(.leading, 5).padding(.trailing, 5)
             }
             .background(RoundedRectangle(cornerRadius: 100)
                 .frame(height: 40)

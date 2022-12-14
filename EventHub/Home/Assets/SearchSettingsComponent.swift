@@ -21,8 +21,8 @@ struct SearchSettingsComponent: View {
                         ZStack(alignment: .leading) {
                             if searchText.isEmpty {
                                 Text("Caută evenimente")
-                                .foregroundColor(Color("lightPurple"))
-                                .font(.system(size: 14))
+                                    .foregroundColor(Color("lightPurple"))
+                                    .font(.system(size: 14))
                             }
                             TextField("", text: $searchText)
                                 .foregroundColor(Color("lightPurple"))
@@ -50,9 +50,9 @@ struct SearchSettingsComponent: View {
                 Button {
                     //action
                 } label: {
-                Image("settings")
-                    .renderingMode(.template)
-                    .foregroundColor(Color.white)
+                    Image("settings")
+                        .renderingMode(.template)
+                        .foregroundColor(Color.white)
                 }
             }
             .padding()

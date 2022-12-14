@@ -16,11 +16,18 @@ struct EventDetailsView<ViewModel: EventDetailsViewModelProtocol>: View {
                 ScrollView(showsIndicators: false) {
                     HeadEventDetails()
                     ParticipatePurpleButton() { }
-                    Divider().padding(.top, 25).frame(width: 366)
+                    Divider()
+                        .padding(.top, 25)
+                        .frame(width: 366)
                     DetailsOfEvent()
-                    Divider().frame(width: 366).padding(.bottom)
+                    Divider()
+                        .frame(width: 366)
+                        .padding(.bottom)
                     OrganiserDetailsEvent() { }
-                    Divider().frame(width: 366).padding(.bottom).padding(.top)
+                    Divider()
+                        .frame(width: 366)
+                        .padding(.bottom)
+                        .padding(.top)
                     MoreSimilarEvents()
                 }
             }

@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct PopularEventsParent: View {
-    let events: [Event]
+    let popularEvents: [Event]
     
-    init(events: [Event]) {
-        self.events = events
+    init(popularEvents: [Event]) {
+        self.popularEvents = popularEvents
     }
     
     var body: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(events) { event in
-                        PopularEventsStyle(event: event)
+                    ForEach(popularEvents) { event in
+                        PopularEventsStyle(event: event, image: event.image)
                     }
                 }
             }
@@ -29,6 +29,6 @@ struct PopularEventsParent: View {
 
 struct PopularEventsParent_Previews: PreviewProvider {
     static var previews: some View {
-        PopularEventsParent(events: [Event]())
+        PopularEventsParent(popularEvents: [Event]())
     }
 }

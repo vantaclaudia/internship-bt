@@ -28,7 +28,6 @@ struct EventHead: View {
                 .cornerRadius(20)
                 .padding(.leading, -90)
             }
-//            .padding(.top, 50)
             HStack{
                 Text("Evenimentul tău")
                     .fontWeight(.semibold)

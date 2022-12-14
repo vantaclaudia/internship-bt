@@ -7,11 +7,7 @@
 
 import Foundation
 
-protocol ProfileNavigationProtocol {
+protocol ProfileNavigationProtocol { }
 
-}
-
-struct ProfileNavigation: ProfileNavigationProtocol {
-
-}
+struct ProfileNavigation: ProfileNavigationProtocol { }
 

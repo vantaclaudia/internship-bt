@@ -13,7 +13,6 @@ protocol SignInViewModelProtocol: ObservableObject {
     var emailPrompt: String {get}
     var passwordPrompt: String {get}
     var isSignUpComplete: Bool {get}
-    func close()
     func goToSignUp()
     func goToHome()
 }
@@ -29,10 +28,6 @@ final class SignInViewModel: SignInViewModelProtocol {
         self.repository = repository
         self.navigation = navigation
     }
-
-    func close() {
-        navigation.onClose?()
-    }
     
     func goToSignUp() {
         navigation.onGoToSignUp?()
@@ -41,7 +36,7 @@ final class SignInViewModel: SignInViewModelProtocol {
     func goToHome() {
         navigation.onGoToHome?()
     }
-
+    
     // MARK: - Validation Functions
     
     func isPasswordValid() -> Bool {

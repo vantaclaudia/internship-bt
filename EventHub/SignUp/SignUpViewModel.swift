@@ -18,7 +18,6 @@ protocol SignUpViewModelProtocol: ObservableObject {
     var confirmPrompt: String {get}
     var passwordPrompt: String {get}
     var isSignUpComplete: Bool {get}
-    func close()
     func goToSignIn()
     func goToHome()
     func createUser()
@@ -32,14 +31,10 @@ final class SignUpViewModel: SignUpViewModelProtocol {
     
     let repository: SignUpRepositoryProtocol
     let navigation: SignUpNavigationProtocol
-
+    
     init(repository: SignUpRepositoryProtocol, navigation: SignUpNavigationProtocol) {
         self.repository = repository
         self.navigation = navigation
-    }
-    
-    func close() {
-        navigation.onClose?()
     }
     
     func goToSignIn() {
@@ -63,7 +58,7 @@ final class SignUpViewModel: SignUpViewModelProtocol {
             }
         }
     }
-
+    
     // MARK: - Validation Functions
     
     func passwordsMatch() -> Bool {
@@ -83,7 +78,7 @@ final class SignUpViewModel: SignUpViewModelProtocol {
     var isSignUpComplete: Bool {
         if !passwordsMatch() || !isPasswordValid() || !isEmailValid() {return false} else {return true}
     }
-
+    
     // MARK: - Validation messages
     
     var confirmPrompt: String {

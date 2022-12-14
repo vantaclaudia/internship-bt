@@ -13,12 +13,12 @@ struct HeadProfile: View {
             VStack(alignment: .leading) {
                 HStack {
                     Button(action: {
-//                        action()
+                        //                        action()
                     }) {
                         Image("add").padding(.trailing, 120)
                     }
                     Button(action: {
-//                        action()
+                        //                        action()
                     }) {
                         Image("edit").padding(.leading, 120)
                     }

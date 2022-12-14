@@ -8,17 +8,15 @@
 import SwiftUI
 import Firebase
 
-protocol ProfileViewModelProtocol: ObservableObject {
-
-}
+protocol ProfileViewModelProtocol: ObservableObject { }
 
 final class ProfileViewModel: ProfileViewModelProtocol {
     let repository: ProfileRepositoryProtocol
     let navigation: ProfileNavigationProtocol
-
+    
     init(repository: ProfileRepositoryProtocol, navigation: ProfileNavigationProtocol) {
         self.repository = repository
         self.navigation = navigation
-
+        
     }
 }

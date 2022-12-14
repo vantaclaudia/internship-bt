@@ -23,8 +23,8 @@ struct ParticipateChooseButton: View {
                     Image("checkmark-circle")
                     Text("PARTICIP").fontWeight(.bold).foregroundColor(Color("purple")).font(.system(size: 16))
                 }.frame(maxWidth: .infinity, alignment: .center).padding(.leading, 80)
-            Image("arrow-down")
-                .padding(.trailing, 50)
+                Image("arrow-down")
+                    .padding(.trailing, 50)
             }
         }
         .frame(width: 366, height: 64)

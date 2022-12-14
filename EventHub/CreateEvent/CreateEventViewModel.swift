@@ -15,10 +15,9 @@ protocol CreateEventViewModelProtocol: ObservableObject {
     var description: String {get set}
     var participants: String {get set}
     var date: Date {get set}
-    var image: UIImage {get set}
+    var image: UIImage? {get set}
     var events: [Event] {get set}
     func goToHome()
-    func close()
     func addEventToDB()
 }
 
@@ -28,7 +27,7 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
     @Published var placeName: String = "Oradea, România"
     @Published var participants = ""
     @Published var date: Date = Date()
-    @Published var image: UIImage = UIImage()
+    @Published var image: UIImage?
     @Published var events = [Event]()
     
     let repository: CreateEventRepositoryProtocol
@@ -38,10 +37,6 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
         self.repository = repository
         self.navigation = navigation
     }
-
-    func close() {
-        navigation.onClose?()
-    }
     
     func goToHome() {
         navigation.onGoToHome?()
@@ -49,7 +44,7 @@ final class CreateEventViewModel: CreateEventViewModelProtocol {
     
     func addEventToDB() {
         let currentUsers = Auth.auth().currentUser!.uid
-        repository.addEventToDB(image: image, currentUsers: currentUsers, eventName: eventName, date: date, placeName: placeName, participants: participants, description: description) {result in
+        repository.addEventToDB(image: image!, currentUsers: currentUsers, eventName: eventName, date: date, placeName: placeName, participants: participants, description: description) {result in
             switch result {
             case .success:
                 print("success")

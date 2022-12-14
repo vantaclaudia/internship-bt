@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol EventDetailsNavigationProtocol {
+protocol EventDetailsNavigationProtocol { }
 
-}
-
-struct EventDetailsNavigation: EventDetailsNavigationProtocol {
-
-}
+struct EventDetailsNavigation: EventDetailsNavigationProtocol { }

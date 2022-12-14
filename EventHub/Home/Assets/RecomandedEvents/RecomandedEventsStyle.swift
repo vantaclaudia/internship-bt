@@ -1,22 +1,21 @@
 //
-//  TopTenEventsNew.swift
+//  TopTenEvents.swift
 //  EventHub
 //
-//  Created by Claudia Vanta on 12.12.2022.
+//  Created by Claudia Vanta on 30.11.2022.
 //
 
 import SwiftUI
 
 extension Formatter {
-    static let smallCardDateFormat: DateFormatter = {
+    static let randomCardDateFormat: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "d MMM" + " • " + "HH:mm"
+        formatter.dateFormat = "d MMM" + " • " + "HH:mm" + " • "
         formatter.locale = Locale(identifier: "ro_RO")
         return formatter
     }()
 }
-
-struct TopTenEventsStyle: View {
+struct RecomandedEventsStyle: View {
     let event: Event
     var image: String
     
@@ -34,26 +33,38 @@ struct TopTenEventsStyle: View {
                         .scaledToFill()
                 } placeholder: {
                 }
-                .frame(width: 159, height: 109)
+                .frame(width: 350, height: 260)
                 .cornerRadius(10)
                 .padding(.top, 8).padding(.bottom, 0)
                 .padding(.trailing, 8).padding(.leading, 8)
-                .overlay(Image("").position(x: 32, y: 32))
             }
             Text(event.eventName)
+                .font(.system(size: 16))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .multilineTextAlignment(.leading)
-                .frame(width: 155)
-                .font(.system(size: 13))
                 .fontWeight(.semibold)
                 .padding(.bottom, 9)
+                .frame(width: 350)
             HStack{
-                Text(Formatter.smallCardDateFormat.string(from: event.date))
-                    .foregroundColor(Color("purple"))
+                Text(Formatter.bigCardDateFormat.string(from: event.date))
                     .textCase(.uppercase)
+                Text(event.placeName)
+                    .padding(.leading, -10)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .multilineTextAlignment(.leading)
+            .frame(width: 350)
+            .foregroundColor(Color("purple"))
+            .font(.system(size: 13))
+            .padding(.top, -10)
+            .padding(.bottom, 5)
+            HStack{
+                Image("participants")
+                Text(event.participants + " " + "participanți")
+                    .foregroundColor(Color("borderGrey"))
             }
             .font(.system(size: 13))
-            .padding(.leading, -60).padding(.top, -10).padding(.bottom, 5)
-        }.background(Color.white).cornerRadius(10).shadow(radius: 0.5)
+        }
+        .background(Color.white).cornerRadius(10).shadow(radius: 0.5)
     }
 }

@@ -27,14 +27,14 @@ struct Participants: View {
                     .foregroundColor(Color.gray)
                     .offset(y: !isFocused && self.text.isEmpty ? -1 : -20)
                     .font(.system(size: 15))
-                    TextField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none).disableAutocorrection(true)
+                TextField("", text: $text).focused($isFocused, equals: true).autocapitalization(.none).disableAutocorrection(true)
                     .keyboardType(.numberPad)
-                                .onReceive(Just(text)) { newValue in
-                                    let filtered = newValue.filter { "0123456789".contains($0) }
-                                    if filtered != newValue {
-                                        self.text = filtered
-                                    }
-                                }
+                    .onReceive(Just(text)) { newValue in
+                        let filtered = newValue.filter { "0123456789".contains($0) }
+                        if filtered != newValue {
+                            self.text = filtered
+                        }
+                    }
             }
             Image(icon)
                 .renderingMode(.template)

@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct DateTimePicker: View {
-    @State private var date = Date()
+    @Binding var date: Date
     var placeholder: String
+    
+    init(placeholder: String, date: Binding<Date>) {
+        self._date = date
+        self.placeholder = placeholder
+    }
     
     private let dateRange: ClosedRange<Date> = {
         let calendar = Calendar.current
@@ -18,12 +23,6 @@ struct DateTimePicker: View {
         
         return minDate!...maxDate!
     }()
-    
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter
-    }
     
     var body: some View {
         HStack {
@@ -44,7 +43,7 @@ struct DateTimePicker: View {
 
 struct DateTimePicker_Previews: PreviewProvider {
     static var previews: some View {
-        DateTimePicker(placeholder: "")
+        DateTimePicker(placeholder: "", date: .constant(Date()))
     }
 }
 

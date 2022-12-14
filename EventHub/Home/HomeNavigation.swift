@@ -8,11 +8,9 @@
 import Foundation
 
 protocol HomeNavigationProtocol {
-    var onClose: (() -> Void)? { get set}
     var onGoToCreateEvent: (() -> Void)? { get set}
 }
 
 struct HomeNavigation: HomeNavigationProtocol {
-    var onClose: (() -> Void)?
     var onGoToCreateEvent: (() -> Void)?
 }

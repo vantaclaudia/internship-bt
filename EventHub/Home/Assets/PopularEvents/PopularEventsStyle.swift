@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Formatter {
     static let bigCardDateFormat: DateFormatter = {
-    let formatter = DateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "d MMM" + " • " + "HH:mm" + " • "
         formatter.locale = Locale(identifier: "ro_RO")
         return formatter
@@ -17,21 +17,26 @@ extension Formatter {
 }
 struct PopularEventsStyle: View {
     let event: Event
+    var image: String
     
-    
-    init(event: Event) {
+    init(event: Event, image: String) {
         self.event = event
+        self.image = image
     }
-
+    
     var body: some View {
         VStack {
             ZStack{
-                Image(event.image)
-                    .resizable()
-                    .frame(width: 304, height: 160)
-                    .cornerRadius(10)
-                    .padding(.top, 8).padding(.bottom, 0)
-                    .padding(.trailing, 8).padding(.leading, 8)
+                AsyncImage(url: URL(string: image)) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                } placeholder: {
+                }
+                .frame(width: 304, height: 160)
+                .cornerRadius(10)
+                .padding(.top, 8).padding(.bottom, 0)
+                .padding(.trailing, 8).padding(.leading, 8)
             }
             Text(event.eventName)
                 .font(.system(size: 16))
@@ -47,20 +52,14 @@ struct PopularEventsStyle: View {
                     .foregroundColor(Color("purple"))
                     .padding(.leading,-10)
             }
-                .font(.system(size: 13))
-                .padding(.leading, -95).padding(.top, -10).padding(.bottom, 5)
+            .font(.system(size: 13))
+            .padding(.leading, -90).padding(.top, -10).padding(.bottom, 5)
             HStack{
                 Image("participants")
-                Text("2.5k participanți").foregroundColor(Color("borderGrey"))
+                Text(event.participants + " " + "participanți").foregroundColor(Color("borderGrey"))
             }
-                .font(.system(size: 13))
-                .padding(.trailing, 130).padding(.top, -10).padding(.bottom, 5)
+            .font(.system(size: 13))
+            .padding(.trailing, 130).padding(.top, -10).padding(.bottom, 5)
         }.background(Color.white).cornerRadius(10).shadow(radius: 0.5)
-    }
-}
-
-struct PopularEventsStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        PopularEventsStyle(event: Event(image: "men", currentUsers: "1", eventName: "Depeche Mode în București -  Memento Mori Tour", date: Date(), placeName: "Oradea, Romania", participants: "250", description: "Descriere"))
     }
 }

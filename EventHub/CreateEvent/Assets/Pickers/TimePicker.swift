@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct TimePicker: View {
-    @State private var date = Date()
+    @Binding var date: Date
     var placeholder: String
-
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        return formatter
+    
+    init(placeholder: String, date: Binding<Date>) {
+        self._date = date
+        self.placeholder = placeholder
     }
     
     var body: some View {
@@ -36,6 +36,6 @@ struct TimePicker: View {
 
 struct TimePicker_Previews: PreviewProvider {
     static var previews: some View {
-        TimePicker(placeholder: "")
+        TimePicker(placeholder: "", date: .constant(Date()))
     }
 }

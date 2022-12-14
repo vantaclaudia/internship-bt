@@ -8,10 +8,6 @@
 import Foundation
 import Firebase
 
-protocol EventDetailsRepositoryProtocol {
+protocol EventDetailsRepositoryProtocol { }
 
-}
-
-final class EventDetailsRepository: EventDetailsRepositoryProtocol {
-
-}
+final class EventDetailsRepository: EventDetailsRepositoryProtocol { }

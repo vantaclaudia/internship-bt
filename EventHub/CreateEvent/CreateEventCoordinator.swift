@@ -19,12 +19,7 @@ final class CreateEventCoordinator {
     func start() {
         let repository = CreateEventRepository()
         var navigation = CreateEventNavigation()
- 
-        navigation.onClose = { [weak self] in
-            self?.navController.popViewController(animated: true)
-            print("Should Close SignUpScreen")
-        }
-        
+
         navigation.onGoToHome = { [weak self] in
             self?.onGoToHome()
         }
