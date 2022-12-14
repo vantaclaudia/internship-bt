@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import Combine
 
 protocol SignUpViewModelProtocol: ObservableObject {
     var userName: String {get set}
@@ -15,7 +17,10 @@ protocol SignUpViewModelProtocol: ObservableObject {
     var emailPrompt: String {get}
     var confirmPrompt: String {get}
     var passwordPrompt: String {get}
-    func close()
+    var isSignUpComplete: Bool {get}
+    func goToSignIn()
+    func goToHome()
+    func createUser()
 }
 
 final class SignUpViewModel: SignUpViewModelProtocol {
@@ -26,14 +31,32 @@ final class SignUpViewModel: SignUpViewModelProtocol {
     
     let repository: SignUpRepositoryProtocol
     let navigation: SignUpNavigationProtocol
-
+    
     init(repository: SignUpRepositoryProtocol, navigation: SignUpNavigationProtocol) {
         self.repository = repository
         self.navigation = navigation
     }
-
-    func close() {
-        navigation.onClose?()
+    
+    func goToSignIn() {
+        navigation.onGoToSignIn?()
+    }
+    
+    func goToHome() {
+        navigation.onGoToHome?()
+    }
+    
+    func createUser() {
+        repository.createUser(username: userName, mail: mail, password: password) { result in
+            switch result {
+            case .success:
+                self.goToHome()
+            case .failure(let error):
+                let alert = UIAlertController(title: "Error!", message: error.localizedDescription, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default) { (_) in }
+                alert.addAction(ok)
+                UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {})
+            }
+        }
     }
     
     // MARK: - Validation Functions
@@ -53,8 +76,7 @@ final class SignUpViewModel: SignUpViewModelProtocol {
     }
     
     var isSignUpComplete: Bool {
-        if !passwordsMatch() || !isPasswordValid() || !isEmailValid() {return false}
-            else {return true}
+        if !passwordsMatch() || !isPasswordValid() || !isEmailValid() {return false} else {return true}
     }
     
     // MARK: - Validation messages

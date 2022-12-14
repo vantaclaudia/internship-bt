@@ -11,6 +11,7 @@ final class AppCoordinator {
     let window: UIWindow
     let navController: UINavigationController
     var signInCoordinator: SignInCoordinator?
+    var homeCoordinator: HomeCoordinator?
 
     init(scene: UIWindowScene) {
         window = UIWindow(windowScene: scene)
@@ -20,10 +21,11 @@ final class AppCoordinator {
     }
 
     func start() {
-        let isLogged = false
+        let isLogged = true
 
         if isLogged {
-//            print("show dashobard")
+            homeCoordinator = HomeCoordinator(navController: navController)
+            homeCoordinator?.start()
         } else {
             signInCoordinator = SignInCoordinator(navController: navController)
             signInCoordinator?.start()

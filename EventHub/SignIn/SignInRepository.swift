@@ -7,12 +7,6 @@
 
 import Foundation
 
-protocol SignInRepositoryProtocol {
-    func getUser() -> String
-}
+protocol SignInRepositoryProtocol { }
 
-final class SignInRepository: SignInRepositoryProtocol {
-    func getUser() -> String {
-        "Claudia"
-    }
-}
+final class SignInRepository: SignInRepositoryProtocol { }
