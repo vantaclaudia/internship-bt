@@ -9,9 +9,11 @@ import SwiftUI
 
 struct PopularEventsParent: View {
     let popularEvents: [Event]
+    let goToEventDetails: (String) -> Void
     
-    init(popularEvents: [Event]) {
+    init(popularEvents: [Event], goToEventDetails: @escaping (String) -> Void) {
         self.popularEvents = popularEvents
+        self.goToEventDetails = goToEventDetails
     }
     
     var body: some View {
@@ -20,15 +22,12 @@ struct PopularEventsParent: View {
                 HStack {
                     ForEach(popularEvents) { event in
                         PopularEventsStyle(event: event, image: event.image)
+                            .onTapGesture {
+                                goToEventDetails(event.id ?? "")
+                        }
                     }
                 }
             }
         }
-    }
-}
-
-struct PopularEventsParent_Previews: PreviewProvider {
-    static var previews: some View {
-        PopularEventsParent(popularEvents: [Event]())
     }
 }

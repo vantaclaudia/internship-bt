@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol EventDetailsNavigationProtocol { }
+protocol EventDetailsNavigationProtocol {
+    var onGoToHome: (() -> Void)? { get set}
+}
 
-struct EventDetailsNavigation: EventDetailsNavigationProtocol { }
+struct EventDetailsNavigation: EventDetailsNavigationProtocol {
+    var onGoToHome: (() -> Void)?
+}

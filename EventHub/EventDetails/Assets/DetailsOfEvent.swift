@@ -7,7 +7,22 @@
 
 import SwiftUI
 
+extension Formatter {
+    static let dateCardDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "E, dd MMMM yyyy"
+        formatter.locale = Locale(identifier: "ro_RO")
+        return formatter
+    }()
+}
+
 struct DetailsOfEvent: View {
+    let event: Event
+    
+    init(event: Event) {
+        self.event = event
+    }
+    
     var body: some View {
         // CALENDAR
         VStack(alignment: .leading) {
@@ -15,7 +30,7 @@ struct DetailsOfEvent: View {
                 Image("calendar-large")
                     .padding(.bottom, 35).padding(.trailing, 5)
                 VStack(alignment: .leading){
-                    Text("Duminică, 26 Octombrie 2023")
+                    Text(Formatter.dateCardDateFormat.string(from: event.date))
                         .frame(height: 15)
                         .font(.system(size: 16))
                         .bold()
@@ -31,10 +46,11 @@ struct DetailsOfEvent: View {
                 Image("location-large")
                     .padding(.bottom, 35).padding(.trailing, 5)
                 VStack(alignment: .leading){
-                    Text("Arena Națională")
+                    Text(event.placeName)
                         .frame(height: 15)
                         .font(.system(size: 16))
                         .bold()
+                        .padding(.bottom, 10).padding(.top, 10)
                     Text("Bulevardul Basarabia 37-39, București" + "\n" + "022103")
                         .font(.system(size: 14))
                     DetailButtons(buttonText: "Vezi locația pe hartă", icon: "location") { }
@@ -58,11 +74,5 @@ struct DetailsOfEvent: View {
             }
             .padding(.bottom, 10)
         }.padding(.leading, -50).padding(.top)
-    }
-}
-
-struct DetailsOfEvent_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailsOfEvent()
     }
 }

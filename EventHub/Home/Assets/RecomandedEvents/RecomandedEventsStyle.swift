@@ -32,6 +32,11 @@ struct RecomandedEventsStyle: View {
                         .resizable()
                         .scaledToFill()
                 } placeholder: {
+                    ZStack{
+                        Color("lightGrey")
+                        Text("Se încarcă...").foregroundColor(Color("borderGrey")).font(.system(size: 15))
+                        
+                    }
                 }
                 .frame(width: 350, height: 260)
                 .cornerRadius(10)
@@ -64,7 +69,14 @@ struct RecomandedEventsStyle: View {
                     .foregroundColor(Color("borderGrey"))
             }
             .font(.system(size: 13))
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .background(Color.white).cornerRadius(10).shadow(radius: 0.5)
+    }
+}
+
+struct RecomandedEventsStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        RecomandedEventsStyle(event: Event(image: "man-cooking", currentUsers: "1", eventName: "ceva", date: Date(), placeName: "ceva", participants: "133", description: "descriere"), image: "man-cooking")
     }
 }

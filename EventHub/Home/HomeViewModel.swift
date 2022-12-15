@@ -13,6 +13,7 @@ protocol HomeViewModelProtocol: ObservableObject {
     var popularEvents: [Event] {get set}
     var recomandedEvents: [Event] {get set}
     func createEvent()
+    func eventDetails(_ id: String)
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
@@ -34,6 +35,10 @@ final class HomeViewModel: HomeViewModelProtocol {
     
     func createEvent() {
         navigation.onGoToCreateEvent?()
+    }
+    
+    func eventDetails(_ id: String) {
+        navigation.onGoToEventDetails?(id)
     }
     
     func getEvents() {

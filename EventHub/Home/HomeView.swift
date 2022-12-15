@@ -71,7 +71,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                     }.padding(.top, 5)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     HStack {
-                        TopTenEvents(events: viewModel.events)
+                        TopTenEvents(events: viewModel.events, goToEventDetails: viewModel.eventDetails(_:))
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -86,7 +86,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                     }.padding(.top, 5)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     HStack {
-                        PopularEventsParent(popularEvents: viewModel.popularEvents)
+                        PopularEventsParent(popularEvents: viewModel.popularEvents, goToEventDetails: viewModel.eventDetails(_:))
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -102,7 +102,7 @@ struct HomeView<ViewModel: HomeViewModelProtocol>: View {
                     .padding(.top, 5)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     HStack{
-                        RecomandedEventsParent(recomandedEvents: viewModel.recomandedEvents)
+                        RecomandedEventsParent(recomandedEvents: viewModel.recomandedEvents, goToEventDetails: viewModel.eventDetails(_:))
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)

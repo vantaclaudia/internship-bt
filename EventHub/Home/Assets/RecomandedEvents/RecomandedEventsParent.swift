@@ -9,9 +9,11 @@ import SwiftUI
 
 struct RecomandedEventsParent: View {
     let recomandedEvents: [Event]
+    let goToEventDetails: (String) -> Void
     
-    init(recomandedEvents: [Event]) {
+    init(recomandedEvents: [Event], goToEventDetails: @escaping (String) -> Void) {
         self.recomandedEvents = recomandedEvents
+        self.goToEventDetails = goToEventDetails
     }
     
     var body: some View {
@@ -19,16 +21,13 @@ struct RecomandedEventsParent: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(recomandedEvents) { event in
-                        PopularEventsStyle(event: event, image: event.image)
+                        RecomandedEventsStyle(event: event, image: event.image)
+                            .onTapGesture {
+                                goToEventDetails(event.id ?? "")
+                        }
                     }
                 }
             }
         }
-    }
-}
-
-struct RecomandedEventsParent_Previews: PreviewProvider {
-    static var previews: some View {
-        RecomandedEventsParent(recomandedEvents: [Event]())
     }
 }

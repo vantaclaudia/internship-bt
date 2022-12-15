@@ -15,6 +15,7 @@ extension Formatter {
         return formatter
     }()
 }
+
 struct PopularEventsStyle: View {
     let event: Event
     var image: String
@@ -32,6 +33,11 @@ struct PopularEventsStyle: View {
                         .resizable()
                         .scaledToFill()
                 } placeholder: {
+                    ZStack{
+                        Color("lightGrey")
+                        Text("Se încarcă...").foregroundColor(Color("borderGrey")).font(.system(size: 15))
+                        
+                    }
                 }
                 .frame(width: 304, height: 160)
                 .cornerRadius(10)
@@ -53,13 +59,21 @@ struct PopularEventsStyle: View {
                     .padding(.leading,-10)
             }
             .font(.system(size: 13))
-            .padding(.leading, -90).padding(.top, -10).padding(.bottom, 5)
+            .padding(.leading, -90)
+            .padding(.top, -10)
+            .padding(.bottom, 5)
             HStack{
                 Image("participants")
-                Text(event.participants + " " + "participanți").foregroundColor(Color("borderGrey"))
+                Text(event.participants + " " + "participanți")
+                    .foregroundColor(Color("borderGrey"))
             }
             .font(.system(size: 13))
-            .padding(.trailing, 130).padding(.top, -10).padding(.bottom, 5)
-        }.background(Color.white).cornerRadius(10).shadow(radius: 0.5)
+            .padding(.trailing, 130)
+            .padding(.top, -10)
+            .padding(.bottom, 5)
+        }
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 0.5)
     }
 }

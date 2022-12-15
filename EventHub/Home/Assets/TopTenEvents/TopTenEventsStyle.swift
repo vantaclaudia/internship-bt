@@ -33,6 +33,11 @@ struct TopTenEventsStyle: View {
                         .resizable()
                         .scaledToFill()
                 } placeholder: {
+                    ZStack{
+                        Color("lightGrey")
+                        Text("Se încarcă...").foregroundColor(Color("borderGrey")).font(.system(size: 15))
+                        
+                    }
                 }
                 .frame(width: 159, height: 109)
                 .cornerRadius(10)
@@ -47,6 +52,7 @@ struct TopTenEventsStyle: View {
                 .font(.system(size: 13))
                 .fontWeight(.semibold)
                 .padding(.bottom, 9)
+                .foregroundColor(Color.black)
             HStack{
                 Text(Formatter.smallCardDateFormat.string(from: event.date))
                     .foregroundColor(Color("purple"))
@@ -55,5 +61,6 @@ struct TopTenEventsStyle: View {
             .font(.system(size: 13))
             .padding(.leading, -60).padding(.top, -10).padding(.bottom, 5)
         }.background(Color.white).cornerRadius(10).shadow(radius: 0.5)
+        
     }
 }

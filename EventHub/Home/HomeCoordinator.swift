@@ -11,6 +11,7 @@ import SwiftUI
 final class HomeCoordinator {
     let navController: UINavigationController
     var createEventCoordinator: CreateEventCoordinator?
+    var eventDetailsCoordinator: EventDetailsCoordinator?
     
     init(navController: UINavigationController) {
         self.navController = navController
@@ -24,6 +25,10 @@ final class HomeCoordinator {
             self?.onGoToCreateEvent()
         }
         
+        navigation.onGoToEventDetails = { [weak self] id in
+            self?.onGoToEventDetails(id)
+        }
+        
         let viewModel = HomeViewModel(repository: repository, navigation: navigation)
         let view = HomeView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: view)
@@ -35,5 +40,10 @@ final class HomeCoordinator {
     func onGoToCreateEvent() {
         createEventCoordinator = CreateEventCoordinator(navController: navController)
         createEventCoordinator?.start()
+    }
+    
+    func onGoToEventDetails(_ id: String) {
+        eventDetailsCoordinator = EventDetailsCoordinator(navController: navController)
+        eventDetailsCoordinator?.start(id)
     }
 }

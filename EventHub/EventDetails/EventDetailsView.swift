@@ -9,21 +9,21 @@ import SwiftUI
 
 struct EventDetailsView<ViewModel: EventDetailsViewModelProtocol>: View {
     @ObservedObject var viewModel: ViewModel
-    
+
     var body: some View {
         ZStack {
             VStack(spacing: 10) {
                 ScrollView(showsIndicators: false) {
-                    HeadEventDetails()
+                    HeadEventDetails(event: viewModel.event, image: viewModel.event.image) {viewModel.goToHome()}
                     ParticipatePurpleButton() { }
                     Divider()
                         .padding(.top, 25)
                         .frame(width: 366)
-                    DetailsOfEvent()
+                    DetailsOfEvent(event: viewModel.event)
                     Divider()
                         .frame(width: 366)
                         .padding(.bottom)
-                    OrganiserDetailsEvent() { }
+                    OrganiserDetailsEvent(event: viewModel.event) { }
                     Divider()
                         .frame(width: 366)
                         .padding(.bottom)
@@ -39,6 +39,6 @@ struct EventDetailsView<ViewModel: EventDetailsViewModelProtocol>: View {
 
 struct EventDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        EventDetailsView(viewModel: EventDetailsViewModel(repository: EventDetailsRepository(), navigation: EventDetailsNavigation()))
+        EventDetailsView(viewModel: EventDetailsViewModel(repository: EventDetailsRepository(), navigation: EventDetailsNavigation(), id: ""))
     }
 }

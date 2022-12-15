@@ -20,12 +20,7 @@ final class SignUpCoordinator {
     func start() {
         let repository = SignUpRepository()
         var navigation = SignUpNavigation()
-        
-        navigation.onClose = { [weak self] in
-            self?.navController.popViewController(animated: true)
-            print("Should Close SignUpScreen")
-        }
-        
+
         navigation.onGoToSignIn = { [weak self] in
             self?.onGoToSignIn()
         }

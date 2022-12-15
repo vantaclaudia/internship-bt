@@ -9,9 +9,11 @@ import SwiftUI
 
 struct TopTenEvents: View {
     let events: [Event]
+    let goToEventDetails: (String) -> Void
     
-    init(events: [Event]) {
+    init(events: [Event], goToEventDetails: @escaping (String) -> Void) {
         self.events = events
+        self.goToEventDetails = goToEventDetails
     }
     
     var body: some View {
@@ -20,15 +22,12 @@ struct TopTenEvents: View {
                 HStack {
                     ForEach(events) { event in
                         TopTenEventsStyle(event: event, image: event.image)
+                            .onTapGesture {
+                                goToEventDetails(event.id ?? "")
+                        }
                     }
                 }
             }
         }
-    }
-}
-
-struct TopTenEvents_Previews: PreviewProvider {
-    static var previews: some View {
-        TopTenEvents(events: [Event]())
     }
 }

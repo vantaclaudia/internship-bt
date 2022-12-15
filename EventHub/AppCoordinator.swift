@@ -12,6 +12,7 @@ final class AppCoordinator {
     let navController: UINavigationController
     var signInCoordinator: SignInCoordinator?
     var homeCoordinator: HomeCoordinator?
+    var eventDetailsCoordinator: EventDetailsCoordinator?
 
     init(scene: UIWindowScene) {
         window = UIWindow(windowScene: scene)
@@ -21,7 +22,7 @@ final class AppCoordinator {
     }
 
     func start() {
-        let isLogged = true
+        let isLogged = false
 
         if isLogged {
             homeCoordinator = HomeCoordinator(navController: navController)

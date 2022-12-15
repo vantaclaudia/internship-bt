@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct OrganiserDetailsEvent: View {
+    let event: Event
     var action: () -> Void
-    
-    init(action: @escaping () -> Void) {
+
+    init(event: Event, action: @escaping () -> Void) {
+        self.event = event
         self.action = action
     }
     
@@ -32,19 +34,11 @@ struct OrganiserDetailsEvent: View {
             }.background(Color("white").cornerRadius(16).frame(width: 366, height: 56))
             //Despre eveniment
             Text("Despre eveniment").fontWeight(.semibold).font(.system(size: 16)).padding(.top, 10)
-            Text("DEPECHE MODE revine la București pe 26 Octombrie" + "\n" + "2023!").font(.system(size: 14)).padding(.top, 5)
-            Text("Concertul face parte din turneul mondial Memnto Mori" + "\n" + "și va avea loc la Arena Națională, în cadrul unui eveniment organizat de Emagic.").font(.system(size: 14)).padding(.top, 5)
-            Text("Biletele vor fi disponibile începând de vineri 7 iulie, ora 10:00 pe bilete.emagic.ro și în rețeaua iaBilet.ro").font(.system(size: 14)).padding(.top, 5)
+            Text(event.description)
             Text("...vezi descrierea completă").font(.system(size: 14)).foregroundColor(Color("darkPurple")).bold()
             //Locatie
             Text("Locație").fontWeight(.semibold).font(.system(size: 16)).padding(.top, 10).padding(.trailing, 30)
             Image("locationPicture").resizable().frame(width: 366, height: 180).padding(.top, 10).padding(.trailing, 20)
         }.padding(.trailing, 10).padding(.leading, 30).padding(.top)
-    }
-}
-
-struct OrganiserDetailsEvent_Previews: PreviewProvider {
-    static var previews: some View {
-        OrganiserDetailsEvent() { }
     }
 }

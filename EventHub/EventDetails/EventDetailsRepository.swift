@@ -8,6 +8,20 @@
 import Foundation
 import Firebase
 
-protocol EventDetailsRepositoryProtocol { }
+protocol EventDetailsRepositoryProtocol {
+    func getEvent(id: String) async throws -> Event
+}
 
-final class EventDetailsRepository: EventDetailsRepositoryProtocol { }
+final class EventDetailsRepository: EventDetailsRepositoryProtocol {
+    let db = Firestore.firestore()
+    
+    func getEvent(id: String) async throws -> Event {
+        do {
+            let snapshot = try await db.collection("events").document(id).getDocument().data(as: Event.self)
+            return snapshot
+        }
+        catch {
+            throw error
+        }
+    }
+}
